@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import 'animate.css';
+import 'atropos/css'
 import { SessionProvider } from "next-auth/react"
 import { wrapper } from '../store/store'
 function MyApp({

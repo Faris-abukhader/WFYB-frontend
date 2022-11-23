@@ -1,5 +1,5 @@
 const sw = {
-    'greeting':'habari'
+    'greeting':'habari',
 }
 
 export default sw;

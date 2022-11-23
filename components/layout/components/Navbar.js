@@ -1,26 +1,18 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Hamburger from 'hamburger-react'
-export default function Navbar({ offcanvasToggler }) {
-  const [isOpen, setOpen] = useState(false)
+export default function Navbar({ show,offcanvasToggler }) {
   const [position, setPosition] = useState('')
 
   const scrollHandler = () => {
-    setPosition(window.pageYOffset >= 80 ? 'sticky' : 'block')
+    setPosition(window.pageYOffset >= 80 ? 'sticky shadow-lg bg-white' : 'block')
   }
-
   useEffect(() => {
     document.addEventListener('scroll', scrollHandler)
   }, [])
 
-
-  const toggle = () => {
-    setOpen(!isOpen)
-    offcanvasToggler()
-  }
-
   return (
-    <div className={`flex items-center justify-between ${position} top-0 p-8 shadow-lg z-50 bg-white`}>
+    <div className={`flex items-center justify-between ${position} top-0 p-8 z-50`}>
       <div className='text-3xl font-bold'>WFYB</div>
       <div className='hidden md:block'>
         <ul className='flex items-center space-x-8 font-almarai'>
@@ -36,8 +28,8 @@ export default function Navbar({ offcanvasToggler }) {
         </button>
         <Image src={`/icons/profile.svg`} width={43} height={43} alt='search' />
       </div>
-      <div id='offcanvas-toggler' className='block md:hidden'>
-        <Hamburger toggled={isOpen} toggle={toggle} easing="ease-in" />
+      <div className='block md:hidden'>
+        <Hamburger toggled={show} toggle={offcanvasToggler} easing="ease-in" />
       </div>
     </div>
   )
