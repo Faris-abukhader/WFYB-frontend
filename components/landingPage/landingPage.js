@@ -1,6 +1,11 @@
-// Import your components here . . . 
 import TopSection from './TopSection'
+import AboutUsSection from './AboutUsSection'
+import PopularProjects from './PopularProjects'
+import WhyChooseUsSection from './WhyChooseUsSection'
 export {
-    // Export all the components . . .
-   TopSection
+   TopSection,
+   AboutUsSection,
+   PopularProjects,
+   WhyChooseUsSection
+
 }

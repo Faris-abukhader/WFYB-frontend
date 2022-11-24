@@ -12,7 +12,7 @@ export default function Navbar({ show,offcanvasToggler }) {
   }, [])
 
   return (
-    <div className={`flex items-center justify-between ${position} top-0 p-8 z-50`}>
+    <div className={`flex items-center justify-between ${position} top-0 p-6 z-50`}>
       <div className='text-3xl font-bold'>WFYB</div>
       <div className='hidden md:block'>
         <ul className='flex items-center space-x-8 font-almarai'>

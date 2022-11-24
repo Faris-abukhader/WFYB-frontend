@@ -1,5 +1,8 @@
 import InputWithLabel from "./InputWithLabel";
-
+import ProjectCard from "./ProjectCard";
+import ProgressBar from "./ProgressBar";
 export {
-    InputWithLabel
+    InputWithLabel,
+    ProjectCard,
+    ProgressBar
 }
