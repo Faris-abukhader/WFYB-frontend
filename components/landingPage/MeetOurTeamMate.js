@@ -12,7 +12,7 @@ const justButton = ()=>{
 export default function MeetOurTeamMate() {
   return (
     <div className='px-8'>
-   <Carousel style={{height0:'80vh'}}>
+   <Carousel defaultControlsConfig={{prevButtonClassName:'hidden',nextButtonClassName:'hidden'}}>
     <TeamMateCard/>
     <TeamMateCard/>
    </Carousel>
