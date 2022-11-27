@@ -1,8 +1,10 @@
 import Layout from '../components/layout/Layout'
+import {ProjectDetailsMain, ProjectDetailsTitle} from '../components/projectDetails/projectDetails'
 export default function ProjectDetails() {
   return (
     <Layout>
-        <div>Project details</div>
+        <ProjectDetailsTitle />
+        <ProjectDetailsMain />
     </Layout>
   )
 }

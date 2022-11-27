@@ -1,7 +1,9 @@
 // Import your components here . . . 
-import Test from "./Test"
+import ProjectDetailsTitle from "./ProjectDetailsTitle"
+import ProjectDetailsMain from "./ProjectDetailsMain"
+
 export {
     // Export all the components . . .
-    Test
-
+    ProjectDetailsTitle,
+    ProjectDetailsMain
 }
