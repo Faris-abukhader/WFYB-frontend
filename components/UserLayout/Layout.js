@@ -5,13 +5,16 @@ import Navbar from './components/Navbar'
 import Offcanvas from './components/Offcanvas'
 export default function Layout({children,currentPage}) {
   const [showOffcanvas, setShowOffcanvas] = useState(false)
+  const [language,setLanguage] = useState('en')
   return (
     <div>
       <Navbar show={showOffcanvas} offcanvasToggler={() => setShowOffcanvas(!showOffcanvas)} />
       <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas} />
-      <Header currentPage={currentPage}/>
-      <div style={{minHeight:'100vh',maxWidth:'750px'}} onClick={()=>setShowOffcanvas(false)}>
+      <Header currentPage={currentPage} language={language}/>
+      <div className='flex justify-center bg-gray-100'>
+      <div style={{minHeight:'100vh',maxWidth:'850px'}} className='w-full py-4' onClick={()=>setShowOffcanvas(false)}>
         {children}
+      </div>
       </div>
       <Footer/>
     </div>

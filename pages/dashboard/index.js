@@ -1,9 +1,12 @@
 import { getSession } from 'next-auth/react'
+import {LineChart} from '../../components/dashboardHomePage/dashboardHomePage'
 import Layout from '../../components/UserLayout/Layout'
 import {wrapper} from '../../store/store'
 export default function index() {
+  const language = 'en'
   return (
     <Layout currentPage={`Home`}>
+      <LineChart language={language}/>
 
     </Layout>
   )

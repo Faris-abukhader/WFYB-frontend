@@ -76,10 +76,10 @@ export default function ProjectProgressCard({title,image,raised,goal,backers,day
                 </div>
                 <div className="flex w-full h-12 space-x-2">
                     <span className='flex w-1 h-full justify-center items-center text-xl'>$</span>
-                    <button className=' w-20 h-full text-base font-semibold border-2 border-slate-200 
+                    <button className='w-20 h-full text-base font-semibold border-2 border-slate-200 
                                         rounded-full hover:border-green-600 focus:border-green-600'>
                         <input 
-                            className='w-1/2 h-full text-xl text-center focus:border-none active:border-none'
+                            className='w-1/2 h-full text-xl text-center focus:border-none active:border-none focus:outline-none'
                             type="number" name="quantity" min="10"
                             value={donationAmount}
                             onChange={(event) => {setDonationAmount(event.target.value)}}

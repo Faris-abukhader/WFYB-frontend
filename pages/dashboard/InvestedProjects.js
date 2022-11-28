@@ -1,9 +1,12 @@
 import { getSession } from 'next-auth/react'
+import {InvestedProjectList} from '../../components/dashboardInvestedProjects/dasboardInvestedProjects'
 import Layout from '../../components/UserLayout/Layout'
 import {wrapper} from '../../store/store'
 export default function InvestedProject() {
   return (
-    <Layout currentPage={`Invested projects`}></Layout>
+    <Layout currentPage={`Invested projects`}>
+      <InvestedProjectList/>
+    </Layout>
   )
 }
 export const getServerSideProps = wrapper.getServerSideProps(store => async (ctx) => {

@@ -1,7 +1,7 @@
 import {memo} from 'react'
 export const CustomModalContent = ({ children}) => {
     return (
-        <div className="modal-body relative p-4">
+        <div className="modal-body relative p-4 ">
             {children}
         </div>
     )
@@ -9,7 +9,7 @@ export const CustomModalContent = ({ children}) => {
 
 export const CustomModalFooter = ({ children }) => {
     return (
-        <div className="modal-footer flex space-x-4 gap-2 flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+        <div className="modal-footer flex space-x-4 gap-2 flex-shrink-0 flex-wrap items-center justify-end p-4 border-t  border-gray-200 rounded-b-md">
             {children}
         </div>
     )
@@ -25,7 +25,7 @@ export function CloseButton({children,onClickHandler}) {
 
 export function ConfirmButton({children,disable,onClickHandler}) {
     return (
-      <button type="submit" disabled={disable} onClick={onClickHandler} className="px-6 py-2.5 bg-cyan-600 rounded-md disabled:bg-opacity-50  appearance-none transition duration-150 ease-in-out ml-1 font-almarai">
+      <button type="submit" disabled={disable} onClick={onClickHandler} className="px-6 py-2.5 bg-green-600 hover:bg-green-700 text-gray-50 hover:text-white rounded-md disabled:bg-opacity-50  appearance-none transition duration-150 ease-in-out ml-1 font-almarai">
           {children}
           </button>
       )

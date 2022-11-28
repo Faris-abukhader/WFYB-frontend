@@ -1,5 +1,9 @@
 const sw = {
-    'greeting':'habari',
+    'addNewProject':'',
+    'fundRaised':'',
+    'totalBacked':'',
+    'pledgeReceived':'',
+    'noInvestedProjectsFound':'',
 }
 
 export default sw;

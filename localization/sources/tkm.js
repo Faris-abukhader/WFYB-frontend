@@ -1,5 +1,9 @@
 const tkm = {
-    'greeting':'salam!'
+    'addNewProject':'',
+    'fundRaised':'',
+    'totalBacked':'',
+    'pledgeReceived':'',
+    'noInvestedProjectsFound':'',
 }
 
 export default tkm;
