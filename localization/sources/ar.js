@@ -4,6 +4,19 @@ const ar = {
   'totalBacker':'عدد عمليات الدعم',
   'pledgeReceived':'عدد التعهدات المستلمة',
   'noInvestedProjectsFound':'المعذره ، انت لم تقم بالاستثمار باي مشروع.',
+  'home':'الرئيسية',
+  'investedProjects':'المشاريع المستثمر بها',
+  'bookMark':'المفضلة',
+  'profile':'الملف الشخصي',
+  'projects':'المشاريع',
+  'dashboard':'لوحة التحكم',
+  'country':'الدولة',
+  'amount':'القيمة',
+  'fundingGoal':'هدف التمويل',
+  'pledgesReceived':'التعهدات المستلمة',
+  'projectName':'اسم المشروع',
+  'changeProfilePicture':'تغيير صورة الملف الشخصي',
+
 
 }
 export default ar;

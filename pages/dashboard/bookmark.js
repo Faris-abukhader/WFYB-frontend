@@ -3,7 +3,7 @@ import Layout from '../../components/UserLayout/Layout'
 import {wrapper} from '../../store/store'
 export default function Bookmark() {
   return (
-    <Layout currentPage={`Bookmark`}></Layout>
+    <Layout currentPage={`bookMark`}></Layout>
   )
 }
 export const getServerSideProps = wrapper.getServerSideProps(store => async (ctx) => {

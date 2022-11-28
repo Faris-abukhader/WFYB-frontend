@@ -7,7 +7,7 @@ export default function Layout({children,currentPage}) {
   const [showOffcanvas, setShowOffcanvas] = useState(false)
   const [language,setLanguage] = useState('en')
   return (
-    <div>
+    <div dir={language=='ar'?'rtl':'ltr'}>
       <Navbar show={showOffcanvas} offcanvasToggler={() => setShowOffcanvas(!showOffcanvas)} />
       <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas} />
       <Header currentPage={currentPage} language={language}/>

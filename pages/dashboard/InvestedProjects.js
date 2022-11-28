@@ -1,11 +1,13 @@
 import { getSession } from 'next-auth/react'
+import { useState } from 'react'
 import {InvestedProjectList} from '../../components/dashboardInvestedProjects/dasboardInvestedProjects'
 import Layout from '../../components/UserLayout/Layout'
 import {wrapper} from '../../store/store'
 export default function InvestedProject() {
+  const [language,setLanguage] = useState('ar')
   return (
-    <Layout currentPage={`Invested projects`}>
-      <InvestedProjectList/>
+    <Layout currentPage={`investedProjects`}>
+      <InvestedProjectList language={language}/>
     </Layout>
   )
 }

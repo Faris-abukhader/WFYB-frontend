@@ -5,7 +5,7 @@ import {wrapper} from '../../store/store'
 export default function index() {
   const language = 'en'
   return (
-    <Layout currentPage={`Home`}>
+    <Layout currentPage={`home`}>
       <LineChart language={language}/>
 
     </Layout>

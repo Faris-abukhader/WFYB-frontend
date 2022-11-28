@@ -1,33 +1,33 @@
-const backerList = [
+const starterList = [
     {
-        title: 'Home',
+        title: 'home',
         url: 'dashboard'
     },
     {
-        title: 'Projects',
+        title: 'projects',
         url: 'dashboard/myProjects'
     },
     {
-        title: 'Profile',
+        title: 'profile',
         url: 'dashboard/profile'
     },
 ]
 
-const starterList = [
+const backerList = [
     {
-        title: 'Home',
+        title: 'home',
         url: 'dashboard'
     },
     {
-        title: 'Invested projects',
+        title: 'investedProjects',
         url: 'dashboard/investedProjects'
     },
     {
-        title: 'BookMark',
+        title: 'bookMark',
         url: 'dashboard/bookmark'
     },
     {
-        title: 'Profile',
+        title: 'profile',
         url: 'dashboard/profile'
     },
 ]

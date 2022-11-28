@@ -3,7 +3,7 @@ import Layout from '../../components/UserLayout/Layout'
 import {wrapper} from '../../store/store'
 export default function MyProjects() {
   return (
-    <Layout currentPage={'Projects'}>
+    <Layout currentPage={'projects'}>
 
     </Layout>
   )

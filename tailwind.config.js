@@ -8,11 +8,7 @@ module.exports = {
     extend: {
       fontFamily:{
         almarai:'Almarai',
-      }  
-    },
-  },
-  theme: {
-    extend: {
+      } , 
       backgroundImage: {
         projectDetailsTitle:
           "url('/images/whyYouChooseUs.jpeg')"
