@@ -20,7 +20,7 @@ const ar = {
   'firstName':'الاسم الأول',
   'lastName':'اسم العائلة',
   'nationality':'الجنسية',
-
+  'projectList':'',
 
 }
 export default ar;

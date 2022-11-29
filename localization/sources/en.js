@@ -20,7 +20,7 @@ const en = {
     'firstName':'first name',
     'lastName':'last name',
     'nationality':'nationality',
-    '':'',
+    'projectList':'Project List',
     '':'',
     '':'',
     '':'',

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import AddNewProjectModel from './AddNewProjectModel'
 import { getTranslatedText as t } from '../../../localization/config'
 export default function Header({currentPage,language}) {
-    const accountType = 'b'
+    const accountType = 's'
     const [showModel,setShowModel] = useState(false)
     const toggle=()=>{
         setShowModel(!showModel)

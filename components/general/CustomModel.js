@@ -1,7 +1,7 @@
 import {memo} from 'react'
-export const CustomModalContent = ({ children}) => {
+export const CustomModalContent = ({ children, style}) => {
     return (
-        <div className="modal-body relative p-4 ">
+        <div className={`modal-body relative px-4 ${style}`}>
             {children}
         </div>
     )

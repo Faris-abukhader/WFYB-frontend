@@ -16,10 +16,11 @@ const tkm = {
     'pledgesReceived':'',
     'projectName':'',
     'changeProfilePicture':'',
-    'basicInfo':'Basic Info',
-    'firstName':'first name',
-    'lastName':'last name',
-    'nationality':'nationality',
+    'basicInfo':'',
+    'firstName':'',
+    'lastName':'',
+    'nationality':'',
+    'projectList':'',
 }
 
 export default tkm;

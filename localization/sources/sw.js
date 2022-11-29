@@ -1,31 +1,9 @@
 const sw = {
-<<<<<<< HEAD
-    'addNewProject':'',
-    'fundRaised':'',
-    'totalBacked':'',
-    'noInvestedProjectsFound':'',
-    'noBookmarksFound':'',
-    'home':'',
-    'investedProjects':'',
-    'bookMark':'',
-    'profile':'',
-    'projects':'',
-    'dashboard':'',
-    'country':'',
-    'amount':'',
-    'fundingGoal':'',
-    'pledgesReceived':'',
-    'projectName':'',
-    'changeProfilePicture':'',
-    'basicInfo':'Basic Info',
-    'firstName':'first name',
-    'lastName':'last name',
-    'nationality':'nationality',
-=======
     'addNewProject':'Ongeza mradi mpya',
     'fundRaised':'Kilichopatikana kwenye mfuko',
     'totalBacked':'Jumla ya waliounga mkono',
     'noInvestedProjectsFound':'Samahani, hujawekeza kwenye mradi wowote.',
+    'noBookmarksFound':'Samahani, hamna hifadhi ya mradi wowote.',
     'home':'Nyumbani',
     'investedProjects':'Miradi uliyowekeza',
     'bookMark':'kitabu cha hifadhi ya tovuti',
@@ -38,7 +16,12 @@ const sw = {
     'pledgesReceived':'ahadi zilizopokelewa',
     'projectName':'jina la mradi',
     'changeProfilePicture':'Badilisha picha ya Akaunti',
->>>>>>> b533c49e21fe714e1e07562c05904f900102bda9
+    'basicInfo':'Basic Info',
+    'firstName':'Jina la Kwanza',
+    'lastName':'Jina la mwisho',
+    'nationality':'taifa',
+    'projectList':'Orodha ya Miradi',
 }
 
 export default sw;
+
