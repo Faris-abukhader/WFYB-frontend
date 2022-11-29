@@ -15,8 +15,8 @@ export default function ProjectProgressCard({title,image,raised,goal,backers,day
 
     return (
         <div ref={cardRef} className={`bg-white rounded-md font-bold`}>
-            <div className=' relative p-5 pt-6 space-y-4 rounded-b-md border-[#202330] border-opacity-20'>
-                <button className='absolute left-5 -top-4 bg-green-500 px-3 py-1 text-gray-100 rounded-sm'>
+            <div className=' relative pt-6 space-y-4 rounded-b-md border-[#202330] border-opacity-20 lg:p-5'>
+                <button className='absolute left-0 top-0 bg-green-500 px-3 py-1 text-gray-100 rounded-sm'>
                     {category}
                 </button>
                 <h1 className='text-3xl'>{title}</h1>
@@ -32,7 +32,7 @@ export default function ProjectProgressCard({title,image,raised,goal,backers,day
                             By Listing Agent
                         </p>
                         <p className="text-slate-500 font-medium text-sm">
-                            {campaigns} Campaigns | 0 Loved Campaigns
+                            {campaigns} Campaigns
                         </p>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ export default function ProjectProgressCard({title,image,raised,goal,backers,day
                     <button className=' w-20 h-full text-base font-semibold border-2 border-slate-200 
                                         rounded-full hover:border-green-600 focus:border-green-600'>
                         <input 
-                            className='w-1/2 h-full text-xl text-center focus:border-none active:border-none'
+                            className='w-1/2 h-full text-xl text-center focus:outline-none active:outline-none'
                             type="number" name="quantity" min="10"
                             value={donationAmount}
                             onChange={(event) => {setDonationAmount(event.target.value)}}

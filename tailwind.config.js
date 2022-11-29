@@ -11,14 +11,7 @@ module.exports = {
       }  
     },
   },
-  theme: {
-    extend: {
-      backgroundImage: {
-        projectDetailsTitle:
-          "url('/images/whyYouChooseUs.jpeg')"
-      },
-    },
-  },
+  
   variants: {},
   plugins: [],
 }
