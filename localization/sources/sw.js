@@ -1,4 +1,5 @@
 const sw = {
+<<<<<<< HEAD
     'addNewProject':'',
     'fundRaised':'',
     'totalBacked':'',
@@ -20,6 +21,24 @@ const sw = {
     'firstName':'first name',
     'lastName':'last name',
     'nationality':'nationality',
+=======
+    'addNewProject':'Ongeza mradi mpya',
+    'fundRaised':'Kilichopatikana kwenye mfuko',
+    'totalBacked':'Jumla ya waliounga mkono',
+    'noInvestedProjectsFound':'Samahani, hujawekeza kwenye mradi wowote.',
+    'home':'Nyumbani',
+    'investedProjects':'Miradi uliyowekeza',
+    'bookMark':'kitabu cha hifadhi ya tovuti',
+    'profile':'Akaunti',
+    'projects':'Mradi',
+    'dashboard':'Dashibodi',
+    'country':'nchi',
+    'amount':'kiasi',
+    'fundingGoal':'lengo la kiasi cha mfuko',
+    'pledgesReceived':'ahadi zilizopokelewa',
+    'projectName':'jina la mradi',
+    'changeProfilePicture':'Badilisha picha ya Akaunti',
+>>>>>>> b533c49e21fe714e1e07562c05904f900102bda9
 }
 
 export default sw;

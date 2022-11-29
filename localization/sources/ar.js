@@ -13,7 +13,7 @@ const ar = {
   'country':'الدولة',
   'amount':'القيمة',
   'fundingGoal':'هدف التمويل',
-  'pledgesReceived':'التعهدات المستلمة',
+  'pledgesReceived':'عدد التعهدات المستلمة',
   'projectName':'اسم المشروع',
   'changeProfilePicture':'تغيير صورة الملف الشخصي',
   'basicInfo':'المعلومات الاساسية',
