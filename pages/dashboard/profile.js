@@ -8,8 +8,10 @@ export default function ProfilePage() {
   const profilePicture = 'avatar-1.svg'
   return (
     <Layout currentPage={`profile`}>
+      <div className='flex-row space-y-3 space-x-0 sm:flex sm:space-x-2 sm:space-y-0'>
       <ProfilePicture language={language} profileImage={profilePicture}/>
       <Profile language={language} profileImage={profilePicture}/>
+      </div>
     </Layout>
   )
 }

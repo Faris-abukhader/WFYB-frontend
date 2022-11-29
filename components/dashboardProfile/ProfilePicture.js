@@ -9,7 +9,7 @@ export default function ProfilePicture({ language, profileImage }) {
         setShowModel(!showModel)
     }
     return (
-        <div>
+        <div className='w-full sm:w-1/3'>
             <section className='w-full p-8 bg-white shadow-md rounded-md'>
                 <h1 className='text-xl font-bold py-4'>{t('Profile Picture', language)}</h1>
                 <div className='relative'>

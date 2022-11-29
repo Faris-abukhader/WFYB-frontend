@@ -3,6 +3,7 @@ const ar = {
   'fundRaised':'الأموال المجموعة',
   'totalBacker':'عدد عمليات الدعم',
   'noInvestedProjectsFound':'المعذره ، انت لم تقم بالاستثمار باي مشروع.',
+  'noBookmarksFound':'المعذرة أنت لم تقم بحفظ أي مشروع في المفضلة.',
   'home':'الرئيسية',
   'investedProjects':'المشاريع المستثمر بها',
   'bookMark':'المفضلة',
@@ -15,6 +16,10 @@ const ar = {
   'pledgesReceived':'التعهدات المستلمة',
   'projectName':'اسم المشروع',
   'changeProfilePicture':'تغيير صورة الملف الشخصي',
+  'basicInfo':'المعلومات الاساسية',
+  'firstName':'الاسم الأول',
+  'lastName':'اسم العائلة',
+  'nationality':'الجنسية',
 
 
 }

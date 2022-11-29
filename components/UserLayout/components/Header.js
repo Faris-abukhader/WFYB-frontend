@@ -10,10 +10,11 @@ export default function Header({currentPage,language}) {
         setShowModel(!showModel)
     }
     return (
-        <div className='bg-gray-100'>
-            <div style={{ backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundSize: '100% 85%' }} className={`relative w-full h-80 bg-[url('/images/dashboardHeader.jpeg')] object-contain font-bold`}>
+        <>
+                    <div style={{ backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundSize: '100% 85%' }} className={`relative w-full h-80 bg-[url('/images/dashboardHeader.jpeg')] object-contain font-bold bg-gray-100`}>
                 <div dir={language=='ar'?'rtl':'ltr'}  className={`hidden sm:block absolute bottom-10 right-4 bg-gray-100 p-3 rounded-md ${language=='ar'&&'font-almarai'}`}>{t('dashboard',language)} / {t(currentPage,language)}</div>
             </div>
+        <div className='bg-gray-100 px-4 sm:px-0'>
             <div dir={language=='ar'?'rtl':'ltr'} style={{ maxWidth: '850px' }} className={`w-full flex items-center justify-center bg-white space-x-6 p-4 shadow-lg rounded-md mx-auto ${accountType=='b' && 'h-[80px]'}`}>
                 <ul className='w-full flex items-center space-x-6 mx-auto text-sm sm:text-md font-bold font-almarai'>
                     {accountType && getPagesList(accountType).map((item,index)=>{
@@ -24,5 +25,6 @@ export default function Header({currentPage,language}) {
             </div>
             <AddNewProjectModel show={showModel} toggle={toggle} language={language}/>
         </div>
+        </>
     )
 }

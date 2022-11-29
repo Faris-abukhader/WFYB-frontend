@@ -12,7 +12,7 @@ export default function Layout({children,currentPage}) {
       <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas} />
       <Header currentPage={currentPage} language={language}/>
       <div className='flex justify-center bg-gray-100'>
-      <div style={{minHeight:'100vh',maxWidth:'850px'}} className='w-full py-4' onClick={()=>setShowOffcanvas(false)}>
+      <div style={{minHeight:'100vh',maxWidth:'850px'}} className='w-full py-4 px-4 sm:px-0' onClick={()=>setShowOffcanvas(false)}>
         {children}
       </div>
       </div>

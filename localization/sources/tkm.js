@@ -3,6 +3,7 @@ const tkm = {
     'fundRaised':'',
     'totalBacked':'',
     'noInvestedProjectsFound':'',
+    'noBookmarksFound':'',
     'home':'',
     'investedProjects':'',
     'bookMark':'',
@@ -15,6 +16,10 @@ const tkm = {
     'pledgesReceived':'',
     'projectName':'',
     'changeProfilePicture':'',
+    'basicInfo':'Basic Info',
+    'firstName':'first name',
+    'lastName':'last name',
+    'nationality':'nationality',
 }
 
 export default tkm;

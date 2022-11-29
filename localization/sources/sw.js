@@ -3,6 +3,7 @@ const sw = {
     'fundRaised':'',
     'totalBacked':'',
     'noInvestedProjectsFound':'',
+    'noBookmarksFound':'',
     'home':'',
     'investedProjects':'',
     'bookMark':'',
@@ -15,6 +16,10 @@ const sw = {
     'pledgesReceived':'',
     'projectName':'',
     'changeProfilePicture':'',
+    'basicInfo':'Basic Info',
+    'firstName':'first name',
+    'lastName':'last name',
+    'nationality':'nationality',
 }
 
 export default sw;
