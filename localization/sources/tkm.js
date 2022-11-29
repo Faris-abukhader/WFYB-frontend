@@ -2,7 +2,6 @@ const tkm = {
     'addNewProject':'',
     'fundRaised':'',
     'totalBacked':'',
-    'pledgeReceived':'',
     'noInvestedProjectsFound':'',
     'home':'',
     'investedProjects':'',

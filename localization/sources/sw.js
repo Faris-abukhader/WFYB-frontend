@@ -2,7 +2,6 @@ const sw = {
     'addNewProject':'',
     'fundRaised':'',
     'totalBacked':'',
-    'pledgeReceived':'',
     'noInvestedProjectsFound':'',
     'home':'',
     'investedProjects':'',
