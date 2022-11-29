@@ -6,7 +6,7 @@ export default function ProjectCard({title,raised,goal,daysLeft,category}) {
     const cardRef = useRef(null)
     return (
         <div onMouseEnter={()=>setIsHover(true)} onMouseLeave={()=>setIsHover(false)} ref={cardRef} className={` bg-white rounded-md ${ishover &&'shadow-lg'} font-bold`}>
-            <div style={{backgroundImage:'url("/images/project-2.jpeg")',backgroundRepeat:'no-repeat',objectFit:'cover'}} className={`relative min-w-min h-[300px] rounded-t-md`}>
+            <div style={{backgroundImage:'url("/images/project2.jpeg")',backgroundRepeat:'no-repeat',objectFit:'cover'}} className={`relative min-w-min h-[300px] rounded-t-md`}>
             {ishover &&<div className='absolute w-full h-full bg-black opacity-20'></div>}
             <div className='absolute top-2 right-2 w-[30px] h-[30px] flex items-center justify-center m-3 bg-gray-800 bg-opacity-20 rounded-full hover:bg-opacity-40 hover:cursor-pointer z-40'>&#9829;</div>
             </div>
