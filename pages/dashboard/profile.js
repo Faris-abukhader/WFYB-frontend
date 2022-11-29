@@ -1,13 +1,21 @@
 import { getSession } from 'next-auth/react'
+import Layout from '../../components/UserLayout/Layout'
 import {wrapper} from '../../store/store'
-export default function Profile() {
+import {Profile, ProfilePicture} from '../../components/dashboardProfile/dashboardProfile'
+import { useState } from 'react'
+export default function ProfilePage() {
+  const [language,setLanguage] = useState('en')
+  const profilePicture = 'avatar-1.svg'
   return (
-    <div>Profile</div>
+    <Layout currentPage={`profile`}>
+      <ProfilePicture language={language} profileImage={profilePicture}/>
+      <Profile language={language} profileImage={profilePicture}/>
+    </Layout>
   )
 }
 export const getServerSideProps = wrapper.getServerSideProps(store => async (ctx) => {
-    const session = await getSession(ctx)
-    if (session?.user) {
+    // const session = await getSession(ctx)
+    // if (session?.user) {
     //   console.log(session)
   
     //   const token = session.user?.token
@@ -16,18 +24,18 @@ export const getServerSideProps = wrapper.getServerSideProps(store => async (ctx
     //   const staffs = await axios.get(`${process.env.API_URL}/staff/all`,{headers:{token}})
   
     //   store.dispatch(setLanguage(language))
-    return {
-          props: {}
-        }
-    } else {
+    // return {
+    //       props: {}
+    //     }
+    // } else {
       
-      return {
-        redirect: {
-          destination: '/api/auth/signin'
-        },
-        props: {}
-      }
-    }
+    //   return {
+    //     redirect: {
+    //       destination: '/api/auth/signin'
+    //     },
+    //     props: {}
+    //   }
+    // }
   
 })
 
