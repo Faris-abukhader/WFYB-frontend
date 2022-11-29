@@ -2,7 +2,6 @@ const ar = {
   'addNewProject':'اضف مشروع جديد',
   'fundRaised':'الأموال المجموعة',
   'totalBacker':'عدد عمليات الدعم',
-  'pledgeReceived':'عدد التعهدات المستلمة',
   'noInvestedProjectsFound':'المعذره ، انت لم تقم بالاستثمار باي مشروع.',
   'home':'الرئيسية',
   'investedProjects':'المشاريع المستثمر بها',
@@ -13,7 +12,7 @@ const ar = {
   'country':'الدولة',
   'amount':'القيمة',
   'fundingGoal':'هدف التمويل',
-  'pledgesReceived':'التعهدات المستلمة',
+  'pledgesReceived':'عدد التعهدات المستلمة',
   'projectName':'اسم المشروع',
   'changeProfilePicture':'تغيير صورة الملف الشخصي',
 

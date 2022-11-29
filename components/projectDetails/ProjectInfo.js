@@ -49,7 +49,7 @@ export default function ProjectInfo() {
                 {[1, 2, 3, 4].map((item) => {
                     return <Image 
                                 className='w-full h-72 sm:h-96 md:h-80 lg:h-96' src={`/images/showcase${item}.jpg`} 
-                                alt="Info images" width={200} height={200} key={item}/>
+                                alt="Info images" width={500} height={500} key={item}/>
                 })}
             </Carousel>
         </div>
