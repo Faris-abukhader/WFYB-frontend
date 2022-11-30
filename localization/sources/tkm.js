@@ -1,5 +1,26 @@
 const tkm = {
-    'greeting':'salam!'
+    'addNewProject':'',
+    'fundRaised':'',
+    'totalBacked':'',
+    'noInvestedProjectsFound':'',
+    'noBookmarksFound':'',
+    'home':'',
+    'investedProjects':'',
+    'bookMark':'',
+    'profile':'',
+    'projects':'',
+    'dashboard':'',
+    'country':'',
+    'amount':'',
+    'fundingGoal':'',
+    'pledgesReceived':'',
+    'projectName':'',
+    'changeProfilePicture':'',
+    'basicInfo':'',
+    'firstName':'',
+    'lastName':'',
+    'nationality':'',
+    'projectList':'',
 }
 
 export default tkm;

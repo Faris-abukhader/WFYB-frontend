@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 export default function ProjectDetailsTitle() {
   return (
@@ -8,7 +7,7 @@ export default function ProjectDetailsTitle() {
                 backgroundRepeat:'no-repeat',
                 backgroundSize:'cover'}} 
         
-        className = "flex w-full h-[400px] items-center"
+        className = "flex w-full h-80 md:h-[400px] items-center"
     >
       <div className='w-full text-center text-white space-y-4'>
           <h1 className='font-bold text-4xl md:text-6xl'>Crowdfunding Platforms</h1>
