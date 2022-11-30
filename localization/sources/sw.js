@@ -4,6 +4,7 @@ const sw = {
     'fundRaised':'Kilichopatikana kwenye mfuko',
     'totalBacked':'Jumla ya waliounga mkono',
     'noInvestedProjectsFound':'Samahani, hujawekeza kwenye mradi wowote.',
+    'noBookmarksFound':'Samahani, hamna hifadhi ya mradi wowote.',
     'home':'Nyumbani',
     'investedProjects':'Miradi uliyowekeza',
     'bookMark':'kitabu cha hifadhi ya tovuti',
@@ -42,3 +43,4 @@ const sw = {
 }
 
 export default sw;
+

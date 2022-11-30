@@ -37,7 +37,7 @@ const ar = {
   "musicAndAudio":'اصوات وموسيقى',
   "programmingAndTech":'تكنولوجيا وبرمجة',
   "data":'بيانات', 
-
+  'projectList':'',
 
 }
 export default ar;
