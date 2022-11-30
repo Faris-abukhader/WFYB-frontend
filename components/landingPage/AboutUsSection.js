@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 export default function AboutUsSection() {
   return (
-    <div className='flex-row sm:flex sm:items-start bg-green-300 bg-opacity-20 pt-20'>
+    <div id='aboutUs' className='flex-row sm:flex sm:items-start bg-green-300 bg-opacity-20 pt-20'>
         <div className='object-contain flex justify-center w-full sm:w-1/2'>
         <Image src={`/images/techGuy.png`} width={420} height={480} alt='vr_image' />
       </div>

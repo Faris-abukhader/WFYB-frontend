@@ -43,7 +43,7 @@ export default function Footer() {
               </div>
               <div>
                 <h1 className='text-gray-400 font-bold'>Email Address</h1>
-                <h1>faresraed2011@yahoo.com</h1>
+                <h1>fares@yahoo.com</h1>
               </div>
             </li>
             <li className='flex space-x-4'>

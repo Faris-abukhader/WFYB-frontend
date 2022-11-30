@@ -1,7 +1,7 @@
 const ar = {
   'addNewProject':'اضف مشروع جديد',
   'fundRaised':'الأموال المجموعة',
-  'totalBacker':'عدد عمليات الدعم',
+  'totalBacked':'عدد عمليات الدعم',
   'noInvestedProjectsFound':'المعذره ، انت لم تقم بالاستثمار باي مشروع.',
   'noBookmarksFound':'المعذرة أنت لم تقم بحفظ أي مشروع في المفضلة.',
   'home':'الرئيسية',
@@ -20,6 +20,23 @@ const ar = {
   'firstName':'الاسم الأول',
   'lastName':'اسم العائلة',
   'nationality':'الجنسية',
+  'email':'البريد الالكتروني',
+  'password':'كلمة المرور',
+  'login':'تسجيل الدخول',
+  'signIn':'تسجيل الدخول',
+  'signOut':'تسجيل الخروج',
+  'passowrdOrEmailIsNotCorrect':'البريد الالكتروني أو كلمة المرور غير صحيحة ، يرجى المحاولة مره أخرى .',
+  'home':'الرئيسية',
+  'aboutUs':'من نحن',
+  'choosingUs':'لماذا نحن',
+  'ourTeam':'فريقنا',
+  "graphicsDesign":"رسم وتصميم",
+  "digitalMarketing":"تسويق الكتروني",
+  "writingAndranslation":'كتابة وترجمة',
+  "videoAndAnimation":'رسوم متحركة وفيديوهات',
+  "musicAndAudio":'اصوات وموسيقى',
+  "programmingAndTech":'تكنولوجيا وبرمجة',
+  "data":'بيانات', 
 
 
 }

@@ -1,7 +1,6 @@
 import axios from "axios";
 import NextAuth from "next-auth"
 import CredentialsProvider  from "next-auth/providers/credentials";
-import('next').NextConfig
 export default NextAuth({
   secret: process.env.JWT_SECRET,
   pages: {
@@ -14,71 +13,52 @@ export default NextAuth({
       credentials: {
         id: 'credentials',
         name: 'Credentials',  
-        email: {
-          label: "Email Address",
-          type: "email",
-          placeholder: "john.doe@example.com",
-        },
-        password: {
-          label: "Password",
-          type: "password",
-          placeholder: "Your super secure password",
-        },
-        rememberMe:{
-          type:'text'
-        }
+        email: {},
+        password: {},
       },
       async authorize(credentials) {
-
-        console.log(credentials)
+        let userObj = {}
           try{
-            fetch(`${process.env.API_URL}/auth/signIn`,
-            {
+            await fetch(`${process.env.API_URL}/auth/signIn`,{
               method:'POST',
               body: JSON.stringify({email:credentials.email,password:credentials.password}),
               headers: {
                 'Content-Type': 'application/json',
                 'token': process.env.WEBSITE_TOKEN
               }
-            }).catch((err)=>{
-              console.log('error is here')
-              console.log(err)
-            })
-  
-  
-
-          const user = res.data
-
-          // console.log(user)
-
-          if (!user.id) {
-            throw new Error('something wrong');
-          }
-
-          // If no error and we have user data, return it
-          if (user.id) {
-            
-            // return user.user
-            return{
-              id:user.id,
-              email:user.email,
-              name:user.client.firstName+' '+user.client.lastName,
-              image:user.client.avatar,
-              language:user.client.language,
-              gender:user.client.gender,
-              birthday:user.client.birthday,
-              token:user.client.token
+            }).then((res)=>res.json())
+            .then((user)=>{
+        
+            if (!user.id) {
+              throw new Error('something wrong');
             }
-          }
-
-          // thorw err if user data could not be retrieved
-          return new Error('something went wrong');
   
+
+              userObj = {
+                id:user.id,
+                email:user.email,
+                name:user.firstName+' '+user.lastName,
+                image:user.avatar,
+                accountType:user.accountType,
+                token:user.token
+              }
+              console.log(userObj)
+              
+              // return user
+              return userObj
+    
+              // // thorw err if user data could not be retrieved
+              // return new Error('something went wrong');
+    
+            })
 
         }catch(err){
+          console.log('error here look')
+          console.log(err)
           throw new Error('something went wrong')
         }
 
+        return userObj
       },
     }),
   ],
@@ -91,6 +71,7 @@ export default NextAuth({
       return baseUrl+'/dashboard'
     },
     jwt:async({token,user})=>{
+      console.log(token,user)
       user && (token.user = user)
       return token
     },

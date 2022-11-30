@@ -1,7 +1,11 @@
-import React from 'react'
-import {Test} from '../../components/auth/auth'
-export default function signIn() {
+import { useState } from 'react'
+import {SignInForm} from '../../components/auth/auth'
+import Layout from '../../components/Layout/Layout'
+export default function SignIn() {
+  const [language,setLanguage] = useState('en')
   return (
-    <div>signIn</div>
+    <Layout>
+      <SignInForm language={language}/>
+    </Layout>
   )
 }

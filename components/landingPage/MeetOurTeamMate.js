@@ -13,7 +13,7 @@ export default function MeetOurTeamMate() {
   };
 
   return (
-    <div className='px-8'>
+    <div id='ourTeam' className='px-8'>
       <Carousel
         className=''
         infiniteLoop={true}

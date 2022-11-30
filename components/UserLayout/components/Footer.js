@@ -37,13 +37,13 @@ export default function Footer() {
         <div>
           <h2 className='text-3xl font-bold pb-8'>Contact</h2>
           <ul className='space-y-6'>
-            <li className='flex space-x-4'>
+             <li className='flex space-x-4'>
               <div className='bg-green-500 p-4 rounded-full'>
-                <Image src={`/icons/telphone.svg`} width={16} height={16} alt='telphone' />
+                <Image src={`/icons/telephone.svg`} width={16} height={16} alt='message' />
               </div>
               <div>
                 <h1 className='text-gray-400 font-bold'>Email Address</h1>
-                <h1>faresraed2011@yahoo.com</h1>
+                <h1>fares@yahoo.com</h1>
               </div>
             </li>
             <li className='flex space-x-4'>

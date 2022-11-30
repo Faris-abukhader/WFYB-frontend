@@ -52,10 +52,10 @@ export default function LineChart({language}) {
       
   return (
     <div className='p-5 bg-white shadow-lg rounded-md'>
-        <div className='flex-row sm:flex items-center space-y-3 sm:space-y-0 sm:space-x-3 pb-3'>
+        <div className='flex-row sm:flex items-center gap-3 space-y-3 sm:space-y-0 pb-3 font-almarai'>
             <StatisticCard amount={0} title={t('fundRaised',language)} isMoney={true}/>
             <StatisticCard amount={0} title={t('totalBacked',language)}/>
-            <StatisticCard amount={0} title={t('pledgeReceived',language)}/>
+            <StatisticCard amount={0} title={t('pledgesReceived',language)}/>
         </div>
         <Line options={options} data={data} />
     </div>
