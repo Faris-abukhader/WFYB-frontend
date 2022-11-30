@@ -3,11 +3,11 @@ import { HYDRATE } from 'next-redux-wrapper'
 
 const initialState = []
 
-export const productSlice = createSlice({
-  name: 'ProductSlice',
+export const projectSlice = createSlice({
+  name: 'ProjectSlice',
   initialState,
   reducers: {
-      setProducts: (state,{payload}) =>{
+      setProjects: (state,{payload}) =>{
         if(payload !== undefined){
           return [...payload]
         }
@@ -22,13 +22,13 @@ export const productSlice = createSlice({
       sortByName:(state)=>{
         return state.sort((a, b) => a.name.localeCompare(b.name))
       },
-      addNewProduct: (state,{payload}) =>{
+      addNewProject: (state,{payload}) =>{
           state.push(payload)
       }, 
-      deleteOneProduct: (state,{payload}) =>{
+      deleteOneProject: (state,{payload}) =>{
         return state.filter((item)=>item.id!=payload)
       },
-      modifyOneProduct: (state,{payload}) =>{
+      modifyOneProject: (state,{payload}) =>{
          return  state.map((item)=>{
             if(item.id != payload.id){
               return item
@@ -39,12 +39,12 @@ export const productSlice = createSlice({
   },
   extraReducers:{
    [HYDRATE]: (state,{payload}) =>{
-    return [...payload.product]
+    return [...payload.project]
    }
   },
 })
 
 
-export const { setProducts,sortById,sortByDate,sortByName,addNewProduct,modifyOneProduct,deleteOneProduct} = productSlice.actions
+export const { setProjects,sortById,sortByDate,sortByName,addNewProject,modifyOneProject,deleteOneProject} = projectSlice.actions
 
-export default productSlice.reducer
+export default projectSlice.reducer

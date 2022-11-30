@@ -10,6 +10,7 @@ import CustomDropdown from "./CustomDropDown";
 import ChangeLanguageButton from "./ChangeLanguageButton";
 import DeleteButton from './DeleteButton';
 import SelectList from "./SelectList";
+import ItemGenerator from "./ItemGenerator";
 export {
     InputWithLabel,
     ProjectCard,
@@ -22,5 +23,6 @@ export {
     CustomDropdown,
     ChangeLanguageButton,
     DeleteButton,
-    SelectList
+    SelectList,
+    ItemGenerator
 }

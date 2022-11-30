@@ -37,7 +37,9 @@ const ar = {
   "musicAndAudio":'اصوات وموسيقى',
   "programmingAndTech":'تكنولوجيا وبرمجة',
   "data":'بيانات', 
-  'projectList':'',
+  'projectList':'قائمة المشاريع',
+  'rewardListIsEmpty':'لائحة الجوائز فارغة',
+  'newProjectHasAddedSuccessfully':'تم اضافة مشروع جديد بنجاح.'
 
 }
 export default ar;

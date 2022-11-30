@@ -40,6 +40,8 @@ const sw = {
     "musicAndAudio":'',
     "programmingAndTech":'',
     "data":'', 
+    'rewardListIsEmpty':'',
+    'newProjectHasAddedSuccessfully':''
 }
 
 export default sw;

@@ -37,6 +37,8 @@ const en = {
     "musicAndAudio":'Music & Audio',
     "programmingAndTech":'Programming & Tech',
     "data":'Data', 
+    'rewardListIsEmpty':'Reward list is empty',
+    'newProjectHasAddedSuccessfully':'New project added successfully.'
 }
 
 export default en;

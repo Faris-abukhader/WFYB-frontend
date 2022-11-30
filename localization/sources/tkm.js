@@ -38,6 +38,8 @@ const tkm = {
     "programmingAndTech":'',
     "data":'', 
     'projectList':'',
+    'rewardListIsEmpty':'',
+    'newProjectHasAddedSuccessfully':''
 }
 
 export default tkm;
