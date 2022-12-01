@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Hamburger from 'hamburger-react'
-import {CustomDropdown} from '../../../components/general/general'
+import {CustomDropdown,ChangeLanguageButton} from '../../../components/general/general'
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { getTranslatedText as t } from '../../../localization/config'
 import { signOut } from 'next-auth/react'
-export default function Navbar({ show,offcanvasToggler,language }) {
+export default function Navbar({ show,offcanvasToggler,language,setLanguage }) {
   const [position, setPosition] = useState('')
   const session = useSession()
 
@@ -30,17 +30,19 @@ export default function Navbar({ show,offcanvasToggler,language }) {
         <ul dir={language=='ar'?'rtl':'ltr'} className='flex items-center space-x-8 font-almarai'>
         <Link href={`/`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('home',language)}</li></Link>
           {language=='ar' &&<li></li>}
+          <Link href={`/projectList`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('browseProjects',language)}</li></Link>
           <Link href={`/#aboutUs`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('aboutUs',language)}</li></Link>
           <Link href={`/#choosingUs`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('choosingUs',language)}</li></Link>
           <Link href={`/#ourTeam`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('ourTeam',language)}</li></Link>          
         </ul>
       </div>
-      <div className='hidden md:flex items-start space-x-2'>
+      <div className='hidden md:flex items-start gap-2'>
         <div>
         <button className='flex items-center justify-center w-[43px] h-[43px] bg-zinc-200 rounded-full'>
           <Image src={`/icons/search.svg`} width={18} height={18} alt='search' />
         </button>
         </div>
+        <ChangeLanguageButton selectHandler={setLanguage}/>
         <CustomDropdown Component={ProfileImage} language={language}>
           {session?.data?.user ? 
           <>

@@ -30,6 +30,7 @@ export default function Navbar({ show,offcanvasToggler,language,setLanguage }) {
         <ul dir={language=='ar'?'rtl':'ltr'} className='flex items-center space-x-8 font-almarai'>
           <Link href={`/`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('home',language)}</li></Link>
           {language=='ar' &&<li></li>}
+          <Link href={`/projectList`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('browseProjects',language)}</li></Link>
           <Link href={`/#aboutUs`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('aboutUs',language)}</li></Link>
           <Link href={`/#choosingUs`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('choosingUs',language)}</li></Link>
           <Link href={`/#ourTeam`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('ourTeam',language)}</li></Link>          

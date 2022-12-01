@@ -1,6 +1,4 @@
-// Import your components here . . . 
-
+import ProjectGrid from "./ProjectGrid"
 export {
-    // Export all the components . . .
-
+    ProjectGrid
 }

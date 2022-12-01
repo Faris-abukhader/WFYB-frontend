@@ -1,56 +1,45 @@
-import { useState, useEffect } from 'react'
 import { CustomModel } from '../../components/general/general'
 import { AvatarPicker } from '../../components/general/general'
 import { useSession } from 'next-auth/react'
 import { getTranslatedText as t } from '../../localization/config'
-export default function AvatarPickerModel({ show, toggle, data, updateAvatar,language }) {
+import { useFormik } from 'formik'
+import * as Yup from 'yup';
+import PutRequest from '../../hooks/PutRequest'
+export default function AvatarPickerModel({ show, toggle, data, language }) {
     const session = useSession()
+    const { sendPutRequest } = PutRequest()
     const userId = session.data?.user?.id
     const token = session.data?.user?.token
-    const [disable, setDisable] = useState(true)
-    const [isValid, setValid] = useState(false)
-    const [avatar, setAvatar] = useState('')
 
-    useEffect(() => {
-        if (show) {
-            setAvatar(data)
-        }
-    }, [show])
+    const formik = useFormik({
+        initialValues: {
+            avatar: session.data?.user?.image,
+        },
+        enableReinitialize: true,
+        validationSchema: Yup.object({
+            image: Yup.string().min(2).max(254).required(),
+        }),
+    });
 
-    const validation = () => {
-        if (isValid) {
-            setDisable(false)
-        } else {
-            setDisable(true)
-        }
-    }
-
-    const reset = () => {
-        setAvatar('')
-    }
-
-    useEffect(() => {
-        setValid(avatar.length > 0 ? true : false)
-        validation()
-    }, [avatar])
-
-    useEffect(() => {
-        console.log(avatar)
-    }, [avatar])
-
-    const close = () => {
-        reset()
+    const closeRequest = () => {
+        formik.resetForm()
         toggle()
     }
+    const upateRequest = () => {
+        console.log('from upddate function ' + formik.values.avatar)
+        sendPutRequest(`auth/avatar/${userId}`, { ...formik.values }, token, language, false, closeRequest)
+    }
+
+
     return (
-        <CustomModel show={show} toggle={toggle} title={t('changeProfilePicture', language)}>
+        <CustomModel show={show} toggle={toggle} language={language} title={t('changeProfilePicture', language)}>
             <CustomModel.Body>
-                <section className="py-1 flex items-center space-x-2">
-                    <AvatarPicker label={`Account avatar`} initalAvatar={avatar} clickHandler={setAvatar} />
-                </section>
+                <div className="py-1 flex items-center space-x-2">
+                    <AvatarPicker label={``} initalAvatar={formik.values.avatar} clickHandler={(newAvatar) => formik.setValues({ 'avatar': newAvatar })} />
+                </div>
             </CustomModel.Body>
             <CustomModel.Footer>
-                <CustomModel.ConfirmButton disable={disable}>confirm</CustomModel.ConfirmButton>
+                <CustomModel.ConfirmButton onClickHandler={upateRequest} disable={formik.isValid}>confirm</CustomModel.ConfirmButton>
                 <CustomModel.CloseButton onClickHandler={() => toggle()}>close</CustomModel.CloseButton>
             </CustomModel.Footer>
         </CustomModel>

@@ -13,9 +13,9 @@ export default function ProjectListModel({data, show, toggle, language}){
     return(
         <CustomModel show={show} toggle={toggle} title={translate('projectList', language)} >
             <CustomModel.Body style={`flex flex-col w-full h-80 overflow-auto`}>
-                {dummyProjects.map((item) => {
+                {dummyProjects.map((item,index) => {
                         return(
-                            <div className='flex items-center justify-between w-full h-12 p-6 mb-3
+                            <div key={index} className='flex items-center justify-between w-full h-12 p-6 mb-3
                                         rounded-md bg-gray-100 text-gray-800
                                       hover:bg-green-400 hover:text-white'>
                                 <span className='font-medium'>{item}</span>

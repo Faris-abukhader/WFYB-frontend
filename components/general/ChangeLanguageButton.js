@@ -4,14 +4,14 @@ import {CustomDropdown} from './general'
 import { useRouter } from 'next/router'
 import { LocalizationContext } from '../../localization/locationlizationContext'
 export default function LanguagePicker({selectHandler}) {
-    const {locale,pathname} = useRouter()
+    const {locale,pathname,query} = useRouter()
     const router = useRouter()
     const [targetLanguage,setTargetLanguage] = useState({name:"English", local:"English",code:"en",flag:'🇬🇧'})
     const {language} = useContext(LocalizationContext)
 
     const handleClick = (code)=>{
         let languageCode = languageList.filter((item)=>item.code==code)[0].code
-        router.push(pathname,pathname,{locale:languageCode})
+        router.push({pathname,query:{id:query?.id}},pathname,{locale:languageCode})
         setTargetLanguage(languageList.filter((item)=>item.code==languageCode)[0])   
         selectHandler(languageList.filter((item)=>item.code==languageCode)[0])
     }

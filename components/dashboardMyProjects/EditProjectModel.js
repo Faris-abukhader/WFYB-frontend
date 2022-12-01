@@ -1,32 +1,22 @@
-import { CustomModel, InputWithLabel, NoDataFound, DeleteButton, SelectList, ItemGenerator } from '../../general/general'
-import { getTranslatedText as t } from '../../../localization/config'
+import { CustomModel, InputWithLabel, NoDataFound, DeleteButton, SelectList, ItemGenerator } from '../general/general'
+import { getTranslatedText as t } from '../../localization/config'
 import { FieldArray, Form, Formik, getIn } from 'formik';
-import { projectCategories, projectType } from '../../../utils/utils'
+import { projectCategories, projectType } from '../../utils/utils'
 import * as Yup from 'yup';
-import PostRequest from '../../../hooks/PostRequest';
+import PutRequest from '../../hooks/PutRequest';
 import { useSession } from 'next-auth/react';
-export default function AddNewProjectModel({ show, toggle, language }) {
-  const { sendPostRequest } = PostRequest()
+export default function EditProjectModel({ show, toggle, language,data }) {
+  const { sendPutRequest } = PutRequest()
   const session = useSession()
   const token = session?.data?.user?.token
   const ownerId = session?.data?.user?.id
+
+  console.log(data)
   return (
     <CustomModel show={show} toggle={toggle} language={language} title={t('addNewProject', language)}>
       <Formik
-        initialValues={{
-          ownerId: ownerId,
-          title: '',
-          country: '',
-          category: '',
-          description: '',
-          shortIntro: '',
-          projectImage: '',
-          compaignDurationEnd: '',
-          fundingGoal: '',
-          rewardList: [],
-          risksAndChallenges: '',
-          projectType: ''
-        }}
+        initialValues={data}
+        enableReinitialize={true}
         validationSchema={Yup.object({
           title: Yup.string().min(2).max(254).required(),
           country: Yup.string().min(2).max(254).required(),
@@ -47,22 +37,18 @@ export default function AddNewProjectModel({ show, toggle, language }) {
           )
         })
         }
-
         onSubmit={(values, actions) => {
-          console.log('from on submit')
-
           console.log(values)
 
           let temp = values
-          temp.ownerId = ownerId
-          temp.rewardList.length > 0 ? true:delete temp.rewardList
+          temp.rewardList?.length > 0 ? true:delete temp.rewardList
           temp.compaignDurationEnd = new Date(values.compaignDurationEnd)
 
           const closeRequest = () => {
             actions.resetForm()
             toggle()
           }
-          sendPostRequest('project', { ...temp }, token, language, true, closeRequest)
+          sendPutRequest(`project/${values.id}`, { ...temp }, token, language, true, closeRequest)
         }}
       >
         {(props) => (
@@ -86,7 +72,7 @@ export default function AddNewProjectModel({ show, toggle, language }) {
                 <InputWithLabel label={t('shortIntro', language)} isValid={props.errors.shortIntro ? false : true} name={`shortIntro`} value={props.values.shortIntro} inputHandler={props.handleChange} />
                 <InputWithLabel label={t('projectImage', language)} isValid={props.errors.projectImage ? false : true} name={`projectImage`} value={props.values.projectImage} inputHandler={props.handleChange} />
               </div>
-              <InputWithLabel label={t('compaignDurationEnd', language)} type={`date`} isValid={props.errors.compaignDurationEnd ? false : true} name={`compaignDurationEnd`} value={props.values.compaignDurationEnd} inputHandler={props.handleChange} />
+              <InputWithLabel label={t('compaignDurationEnd', language)} type={`date`} isValid={props.errors.compaignDurationEnd ? false : true} name={`compaignDurationEnd`} value={new Date(props.values.compaignDurationEnd?? new Date()).toISOString().split('T')[0]} inputHandler={props.handleChange} />
               <InputWithLabel label={t('risksAndChallenges', language)} isTextArea={true} isValid={props.errors.risksAndChallenges ? false : true} name={`risksAndChallenges`} value={props.values.risksAndChallenges} inputHandler={props.handleChange} />
               <FieldArray name="rewardList">
                 {(arrayHelpers) => (

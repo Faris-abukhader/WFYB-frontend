@@ -1,4 +1,4 @@
-import {memo} from 'react'
+import Image from 'next/image'
 export const CustomModalContent = ({ children, style}) => {
     return (
         <div className={`modal-body relative px-4 ${style}`}>
@@ -28,6 +28,14 @@ export function ConfirmButton({children,disable,onClickHandler}) {
       <button type="submit" disabled={disable} onClick={onClickHandler} className="px-6 py-2.5 bg-green-600 hover:bg-green-700 text-gray-50 hover:text-white rounded-md disabled:bg-opacity-50  appearance-none transition duration-150 ease-in-out ml-1 font-almarai">
           {children}
           </button>
+      )
+}
+
+export function EditButton({onClickHandler}) {
+    return (
+      <button type="submit" onClick={onClickHandler} className="rounded-full hover:ring ring-blue-400  appearance-none transition duration-150 ease-in-out ml-1">
+          <Image src={`/icons/edit.svg`} width={35} height={35} alt='edit'/>
+      </button>
       )
 }
   
@@ -62,4 +70,6 @@ CustomModal.Body = CustomModalContent
 CustomModal.Footer = CustomModalFooter
 CustomModal.CloseButton = CloseButton
 CustomModal.ConfirmButton = ConfirmButton
+CustomModal.EditButton = EditButton
+
 export default (CustomModal);

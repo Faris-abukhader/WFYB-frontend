@@ -18,7 +18,7 @@ export default function AvatarPicker({ label, clickHandler, initalAvatar = "avat
     return (
         <div className='h-[170px]'>
             <div className='relative pl-2 text-sm text-gray-700'>{label}</div>
-            <div className='absolute top-100 w-full h-[120px] flex overflow-x-auto space-x-4 scrollbar-hide '>
+            <div className='absolute top-100 w-full h-[120px] flex overflow-x-auto gap-4 scrollbar-hide '>
                 {avatarList.map((avatar, index) => {
                     return (
                         <div key={index} className={`p-0 ml-1 my-2 w-[100px] h-[100px] flex-none  ring appearance-none opacity-90 hover:opacity-100 hover:scale-105 hover:ring-blue-300   cursor-pointer rounded-md  ${selectedAvatar == avatar ? 'ring-blue-400' : 'ring-gray-200'}  `}>

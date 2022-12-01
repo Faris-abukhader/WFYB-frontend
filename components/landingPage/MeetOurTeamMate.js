@@ -2,7 +2,7 @@ import React from 'react'
 import TeamMateCard from './TeamMateCard';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-export default function MeetOurTeamMate() {
+export default function MeetOurTeamMate({language}) {
   const indicatorStyles = {
     background: 'grey',
     width: '10px',
@@ -13,10 +13,10 @@ export default function MeetOurTeamMate() {
   };
 
   return (
-    <div id='ourTeam' className='px-8'>
+    <div dir={'ltr'} id='ourTeam' className='px-8'>
       <Carousel
-        className=''
         infiniteLoop={true}
+        transitionTime={1500}
         autoPlay={true}
         showThumbs={false}
         showArrows={false}

@@ -1,6 +1,6 @@
 import { getSession } from 'next-auth/react'
 import { useContext } from 'react'
-import {LineChart} from '../../components/dashboardHomePage/dashboardHomePage'
+import {StaticSection} from '../../components/dashboardHomePage/dashboardHomePage'
 import Layout from '../../components/UserLayout/Layout'
 import { LocalizationContext } from '../../localization/locationlizationContext'
 import {wrapper} from '../../store/store'
@@ -8,7 +8,7 @@ export default function Index() {
   const {language} = useContext(LocalizationContext)
   return (
     <Layout currentPage={`home`}>
-      <LineChart language={language}/>
+      <StaticSection language={language}/>
     </Layout>
   )
 }
