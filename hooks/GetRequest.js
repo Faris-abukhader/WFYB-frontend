@@ -10,22 +10,20 @@ const GetRequest = ()=> {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
 
-  function sendGetRequest(url,token,language,action){
+  function sendGetRequest(url,token,hasAction=true){
     console.log('sending request . . .')
     setIsLoading(true)
     axios.get(`${process.env.API_URL}/${url}`, { headers: { token } })
     .then((res) => {
-      console.log(res)
-      setData(res)
-      fireNotification({icon:'success',label:t(`New${url[0].toUpperCase() + url.slice(1)}HasAddedSuccessfully`,language)})
-      let action = actionHelper(url,'add')
-      dispatch(action(res.data))
+      setData(res.data.data??[])
+      if(hasAction){
+        let action = actionHelper(url.split('/')[0],'set')
+        dispatch(action(res.data.data??[]))  
+      }
     }).catch((err) => {
       console.log(err)
-      fireNotification({icon:'error',label:t('somethingWentWrong',language)})
       setIsError(true)
     })
-    action()
     setIsLoading(false)  
   }    
   return {isError,isLoading,data,sendGetRequest}

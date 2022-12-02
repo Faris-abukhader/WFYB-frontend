@@ -1,16 +1,31 @@
-import React from 'react'
-import {NoDataFound, ProjectCard} from '../general/general'
+import { useSelector } from 'react-redux'
+import {NoDataFound, ProjectCard, ProjectCardSketelon} from '../general/general'
+export default function ProjectGrid({language,bookmarkList,isSearching}) {
+  const data = useSelector((state)=>state.project)
 
-export default function ProjectGrid({data,language}) {
+  const checkSaved = (id)=>{
+    let result = false
+    bookmarkList.map((item)=>{if(item==id)result =true})
+    return result
+  }
+
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-4 pt-20'>
-    {data && data.length > 0 ? 
-        <>
-         {data.map((project)=><ProjectCard key={project.id} {...project} language={language}/>)}
-         </>
+    <div >
+      
+      {isSearching ? 
+      ([1,2,3,4,5,6,7]).map((num)=><ProjectCardSketelon key={num}/>) 
+      :
+      <>
+      {data && data.length > 0 ? 
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-4 py-20'>
+     {data.map((project)=><ProjectCard key={project.id} {...project}  isSaved={checkSaved(project?.id)} language={language}/>)}
+         </div>
         :
-        <NoDataFound label={'noData'}/>
+        <NoDataFound label={'noResultFound'} language={language}/>
         }
+         </>
+    }
+   
     </div>
   )
 }

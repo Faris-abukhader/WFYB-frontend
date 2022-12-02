@@ -11,6 +11,7 @@ import ChangeLanguageButton from "./ChangeLanguageButton";
 import DeleteButton from './DeleteButton';
 import SelectList from "./SelectList";
 import ItemGenerator from "./ItemGenerator";
+import ProjectCardSketelon from "./ProjectCardSkeleton";
 export {
     InputWithLabel,
     ProjectCard,
@@ -24,5 +25,6 @@ export {
     ChangeLanguageButton,
     DeleteButton,
     SelectList,
-    ItemGenerator
+    ItemGenerator,
+    ProjectCardSketelon
 }

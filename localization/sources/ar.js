@@ -70,6 +70,8 @@ const ar = {
   'story':'القصة',
   'commentsList':'لائحة التعليقات',
   'selectReward':'اختر الجائزة',
+  'searchForProject':'ابحث عن مشروع',
+  'noResultFound':'نعتذر ، لم يتم العثور على أي نتيجة ، يرجى ادخال كلمة بحث اخر.'
 
 }
 export default ar;

@@ -69,6 +69,8 @@ const en = {
     'story':'Story',
     'commentsList':'Comments list',
     'selectReward':'Select Reward',
+    'searchForProject':'Search for project',
+    'noResultFound':'Sorry ! No result found .Please try another title.'
 
 }
 

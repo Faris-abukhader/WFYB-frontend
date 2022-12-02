@@ -3,9 +3,12 @@ import Image from 'next/image'
 import {ProgressBar} from './general'
 import { getTranslatedText as t } from '../../localization/config'
 import Link from 'next/link'
-export default function ProjectCard({id,title,raised,fundingGoal,compaignDurationEnd,pledgeList,daysLeft,category,language=''}) {
+import { useSession } from 'next-auth/react'
+export default function ProjectCard({id,title,fundingGoal,compaignDurationEnd,pledgeList,category,language='',isSaved=false}) {
     const [ishover,setIsHover] = useState(false)
     const cardRef = useRef(null)
+    const session = useSession()
+    const accountType = session.data?.user?.accountType
 
     const getDaysDiff = (date)=>{
         let d1 = new Date();   
@@ -25,12 +28,12 @@ export default function ProjectCard({id,title,raised,fundingGoal,compaignDuratio
         return (total/fundingGoal)*100
     }
     return (
-       <Link href={`/projectDetails?id=${id}`}>
        <div dir={language=='ar' ?'rtl':'ltr'} onMouseEnter={()=>setIsHover(true)} onMouseLeave={()=>setIsHover(false)} ref={cardRef} className={` bg-white rounded-md ${ishover &&'shadow-lg'} font-bold hover:cursor-pointer font-almarai`}>
             <div style={{backgroundImage:'url("/images/project2.jpeg")',backgroundRepeat:'no-repeat',objectFit:'cover'}} className={`relative min-w-min h-[300px] rounded-t-md`}>
             {ishover &&<div className='absolute w-full h-full bg-black opacity-20'></div>}
-            <div className='absolute top-2 right-2 w-[30px] h-[30px] flex items-center justify-center m-3 bg-gray-800 bg-opacity-20 rounded-full hover:bg-opacity-40 hover:cursor-pointer z-40'>&#9829;</div>
-            </div>
+            {(accountType && accountType=='b') && <div className={`absolute top-2 right-2 w-[30px] h-[30px] flex items-center justify-center m-3 bg-gray-800 bg-opacity-20 rounded-full hover:bg-opacity-40 hover:cursor-pointer z-40 ${isSaved?'text-red-500':'text-black'}`}>&#9829;</div>}
+          </div>
+          <Link href={`/projectDetails?id=${id}`}>
             <div className='relative p-5 pt-6 space-y-4 border border-t-0 rounded-b-md border-[#202330] border-opacity-20'>
                 <button className='absolute left-5 -top-4 bg-green-500 px-3 py-1 text-gray-100 rounded-sm'>{t(category,language)}</button>
                 <h1 className='text-lg'>{title}</h1>
@@ -45,7 +48,7 @@ export default function ProjectCard({id,title,raised,fundingGoal,compaignDuratio
                     <div className='text-green-600'>{t('explore',language)} &#8594;</div>
                 </div>
             </div>
+            </Link>
         </div>
-        </Link>
     )
 }

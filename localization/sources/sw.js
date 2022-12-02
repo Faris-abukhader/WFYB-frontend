@@ -72,6 +72,8 @@ const sw = {
     'story':'',
     'commentsList':'',
     'selectReward':'',
+    'searchForProject':'',
+    'noResultFound':''
   
 }
 

@@ -70,6 +70,8 @@ const tkm = {
     'story':'',
     'commentsList':'',
     'selectReward':'',
+    'searchForProject':'',
+    'noResultFound':''
 }
 
 export default tkm;
