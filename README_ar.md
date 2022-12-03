@@ -245,4 +245,4 @@ npm run dev
 
 ## 📜 الرخصة
 
-هذا المشروع تحت رخصة [MIT](https://github.com/Faris-abukhader/we-work/blob/main/license) © [FaRiS](https://github.com/Faris-abukhader).
+هذا المشروع تحت رخصة [MIT](https://github.com/Faris-abukhader/WFYB-frontend/blob/main/licence) © [FaRiS](https://github.com/Faris-abukhader).
