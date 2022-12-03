@@ -248,14 +248,14 @@ npm run dev
 | [`next-auth`](https://github.com/nextauthjs/next-auth) | is a complete open source authentication solution for Next.js applications. |
 | [`@smastrom/react-rating`](https://www.npmjs.com/package/@smastrom/react-rating) | react rating component.  |
 | [`tailwindcss`](https://www.npmjs.com/package/tailwindcss) | A utility-first CSS framework for rapidly building custom user interfaces. |
-| [`atropos`](https://www.npmjs.com/package/atropos) | A utility-first CSS framework for rapidly building custom user interfaces. |
-| [`axios`](https://www.npmjs.com/package/axios) | A utility-first CSS framework for rapidly building custom user interfaces. |
-| [`chart.js`](https://www.npmjs.com/package/chart.js) | A utility-first CSS framework for rapidly building custom user interfaces. |
-| [`formik`](https://www.npmjs.com/package/formik) | A utility-first CSS framework for rapidly building custom user interfaces. |
-| [`hamburger-react`](https://www.npmjs.com/package/hamburger-react) | A utility-first CSS framework for rapidly building custom user interfaces. |
-| [`i18next`](https://www.npmjs.com/package/i18next) | A utility-first CSS framework for rapidly building custom user interfaces. |
-| [`react-responsive-carousel`](https://www.npmjs.com/package/react-responsive-carousel) | A utility-first CSS framework for rapidly building custom user interfaces. |
-| [`yup`](https://www.npmjs.com/package/yup) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`atropos`](https://www.npmjs.com/package/atropos) | Touch-friendly 3D parallax hover effects. |
+| [`axios`](https://www.npmjs.com/package/axios) | Promise based HTTP client for the browser and node.js |
+| [`chart.js`](https://www.npmjs.com/package/chart.js) | Simple yet flexible JavaScript charting for designers & developers. |
+| [`formik`](https://www.npmjs.com/package/formik) | Build forms in React, without the tears. |
+| [`hamburger-react`](https://www.npmjs.com/package/hamburger-react) | Animated hamburger menu icons for React. |
+| [`i18next`](https://www.npmjs.com/package/i18next) | I18next internationalization framework. |
+| [`react-responsive-carousel`](https://www.npmjs.com/package/react-responsive-carousel) | React Responsive Carousel. |
+| [`yup`](https://www.npmjs.com/package/yup) | Dead simple Object schema validation. |
 
 
 ## 📜 License
