@@ -3,11 +3,11 @@ import { HYDRATE } from 'next-redux-wrapper'
 
 const initialState = []
 
-export const projectSlice = createSlice({
-  name: 'ProjectSlice',
+export const bookmarkSlice = createSlice({
+  name: 'BookmarkSlice',
   initialState,
   reducers: {
-      setProjects: (state,{payload}) =>{
+      setBookmarks: (state,{payload}) =>{
         if(payload !== undefined){
           return [...payload]
         }
@@ -22,13 +22,13 @@ export const projectSlice = createSlice({
       sortByName:(state)=>{
         return state.sort((a, b) => a.name.localeCompare(b.name))
       },
-      addNewProject: (state,{payload}) =>{
-          state.push(payload.id)
+      addNewBookmark: (state,{payload}) =>{
+          state.push(payload)
       }, 
-      deleteOneProject: (state,{payload}) =>{
+      deleteOneBookmark: (state,{payload}) =>{
         return state.filter((item)=>item.id!=payload)
       },
-      modifyOneProject: (state,{payload}) =>{
+      modifyOneBookmark: (state,{payload}) =>{
          return  state.map((item)=>{
             if(item.id != payload.id){
               return item
@@ -39,12 +39,12 @@ export const projectSlice = createSlice({
   },
   extraReducers:{
    [HYDRATE]: (state,{payload}) =>{
-    return [...payload.project]
+    return [...payload.bookmark]
    }
   }
 })
 
 
-export const { setProjects,sortById,sortByDate,sortByName,addNewProject,modifyOneProject,deleteOneProject} = projectSlice.actions
+export const { setBookmarks,sortById,sortByDate,sortByName,addNewBookmark,modifyOneBookmark,deleteOneBookmark} = bookmarkSlice.actions
 
-export default projectSlice.reducer
+export default bookmarkSlice.reducer

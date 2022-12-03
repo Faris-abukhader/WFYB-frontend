@@ -26,7 +26,7 @@ export default function Story({ backer, description, shortIntro, rewardList, lan
                         <h2 className='text-xl font-bold text-green-500'>{reward.amount}$</h2>
                         <p className='text-lg text-slate-500'>{reward.description}</p>
                         <button className='bg-green-600  px-3 py-1 rounded-3xl text-sm font-bold text-zinc-50
-                                        hover:opacity-90 hover:space-x-3 transition-all duration-300'>
+                                        hover:opacity-90 hover:gap-3 transition-all duration-300'>
                             <span>{t('selectReward', language)}</span>
                         </button>
                     </div>)}

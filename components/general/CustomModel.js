@@ -9,7 +9,7 @@ export const CustomModalContent = ({ children, style}) => {
 
 export const CustomModalFooter = ({ children }) => {
     return (
-        <div className="modal-footer flex space-x-4 gap-2 flex-shrink-0 flex-wrap items-center justify-end p-4 border-t  border-gray-200 rounded-b-md">
+        <div className="modal-footer flex gap-4 gap-2 flex-shrink-0 flex-wrap items-center justify-end p-4 border-t  border-gray-200 rounded-b-md">
             {children}
         </div>
     )

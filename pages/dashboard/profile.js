@@ -8,7 +8,7 @@ export default function ProfilePage() {
   const {language} = useContext(LocalizationContext)
   return (
     <Layout currentPage={`profile`}>
-      <div className='flex-row space-y-3 space-x-0 sm:flex sm:gap-3 sm:space-y-0'>
+      <div className='flex-row space-y-3 gap-0 sm:flex sm:gap-3 sm:space-y-0'>
       <ProfilePicture language={language}/>
       <Profile language={language}/>
       </div>

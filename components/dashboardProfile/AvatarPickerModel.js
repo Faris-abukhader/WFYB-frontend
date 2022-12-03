@@ -34,7 +34,7 @@ export default function AvatarPickerModel({ show, toggle, data, language }) {
     return (
         <CustomModel show={show} toggle={toggle} language={language} title={t('changeProfilePicture', language)}>
             <CustomModel.Body>
-                <div className="py-1 flex items-center space-x-2">
+                <div className="py-1 flex items-center gap-2">
                     <AvatarPicker label={``} initalAvatar={formik.values.avatar} clickHandler={(newAvatar) => formik.setValues({ 'avatar': newAvatar })} />
                 </div>
             </CustomModel.Body>

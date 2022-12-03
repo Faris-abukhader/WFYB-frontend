@@ -47,7 +47,7 @@ export default function SignInForm({ language }) {
                 <h1 className='text-4xl font-bold text-center text-gray-700 py-6'>{t('login', language)}</h1>
                 <form onSubmit={formik.handleSubmit}>
                 <InputWithLabel label={t('email', language)} name='email' value={formik.values.email} isValid={formik.errors.email ? false : true} inputHandler={formik.handleChange} />
-                <InputWithLabel label={t('password', language)} name='password' value={formik.values.password} isValid={formik.errors.password ? false : true} inputHandler={formik.handleChange} />
+                <InputWithLabel label={t('password', language)} type='password' name='password' value={formik.values.password} isValid={formik.errors.password ? false : true} inputHandler={formik.handleChange} />
                 <button disabled={!formik.isValid} type='submit' className='w-full flex items-center justify-center space-x-2 bg-green-500 rounded-lg py-2 text-gray-100 disabled:bg-green-400 disabled:text-gray-200'>
                     {isLoading &&<SpinButton size={4}/>} <span>{t('login', language)}</span>
                     </button>

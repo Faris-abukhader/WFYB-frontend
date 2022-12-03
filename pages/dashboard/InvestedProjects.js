@@ -3,37 +3,41 @@ import { useState } from 'react'
 import {InvestedProjectList} from '../../components/dashboardInvestedProjects/dasboardInvestedProjects'
 import Layout from '../../components/UserLayout/Layout'
 import {wrapper} from '../../store/store'
-export default function InvestedProject() {
+import axios from 'axios'
+export default function InvestedProject({investedProjectList}) {
   const [language,setLanguage] = useState('ar')
   return (
     <Layout currentPage={`investedProjects`}>
-      <InvestedProjectList language={language}/>
+      <InvestedProjectList data={investedProjectList} language={language}/>
     </Layout>
   )
 }
 export const getServerSideProps = wrapper.getServerSideProps(store => async (ctx) => {
-    // const session = await getSession(ctx)
-    // if (session?.user && session?.user.accountType=='b') {
-    //   console.log(session)
+    const session = await getSession(ctx)
+    if (session?.user && session?.user.accountType=='b') {
+      console.log(session)
   
-    //   const token = session.user?.token
+      const token = session.user?.token
+      const id = session.user?.id
     
-    //   const customers = await axios.get(`${process.env.API_URL}/client/all`,{headers:{token}})
-    //   const staffs = await axios.get(`${process.env.API_URL}/staff/all`,{headers:{token}})
+      const investedProjectsRequest = await axios.get(`${process.env.API_URL}/project/investedProject/${id}/`,{headers:{token}})
+
+      console.log(investedProjectsRequest.data)
   
-    //   store.dispatch(setLanguage(language))
-    // return {
-    //       props: {}
-    //     }
-    // } else {
+    return {
+          props: {
+            investedProjectList:investedProjectsRequest.data?.pledges
+          }
+        }
+    } else {
       
-    //   return {
-    //     redirect: {
-    //       destination: '/api/auth/signin'
-    //     },
-    //     props: {}
-    //   }
-    // }
+      return {
+        redirect: {
+          destination: '/api/auth/signin'
+        },
+        props: {}
+      }
+    }
   
 })
 

@@ -10,14 +10,14 @@ const PostRequest = ()=> {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
 
-  function sendPostRequest(url,payload,token,language,hasAction,action){
+  async function sendPostRequest(url,payload,token,language,hasAction,action=()=>{}){
     console.log('sending request . . .')
     setIsLoading(true)
     axios.post(`${process.env.API_URL}/${url}`, { ...payload }, { headers: { token } })
     .then((res) => {
       console.log(res)
       setData(res)
-      fireNotification({icon:'success',label:t(`new${url[0].toUpperCase() + url.slice(1)}HasAddedSuccessfully`,language)})
+      fireNotification({icon:'success',label:t(`new${url[0].toUpperCase() + url.split('/')[0].slice(1)}HasAddedSuccessfully`,language)})
       if(hasAction){
       let action = actionHelper(url,'add')
       dispatch(action(res.data))

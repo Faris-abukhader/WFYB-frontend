@@ -27,9 +27,8 @@ export default function Navbar({ show,offcanvasToggler,language,setLanguage }) {
     <div className={`flex items-center justify-between ${position} top-0 p-6 z-50`}>
       <Link href={`/`}><div className='text-3xl font-bold hover:cursor-pointer'>WFYB</div></Link>
       <div className='hidden md:block'>
-        <ul dir={language=='ar'?'rtl':'ltr'} className='flex items-center space-x-8 font-almarai'>
+        <ul dir={language=='ar'?'rtl':'ltr'} className='flex items-center gap-8 font-almarai'>
           <Link href={`/`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('home',language)}</li></Link>
-          {language=='ar' &&<li></li>}
           <Link href={`/projectList`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('browseProjects',language)}</li></Link>
           <Link href={`/#aboutUs`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('aboutUs',language)}</li></Link>
           <Link href={`/#choosingUs`}><li className='hover:cursor-pointer hover:font-bold transition-all duration-300 hover:-translate-y-1 hover:border-b-2 border-green-500'>{t('choosingUs',language)}</li></Link>

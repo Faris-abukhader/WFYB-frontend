@@ -6,28 +6,32 @@ import actionHelper from '../store/actionHelper';
 import { useDispatch } from 'react-redux'
 const DeleteRequest = ()=> {
   const dispatch = useDispatch()
-  const [isError, setIsError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isDeleteError, setIsDeleteError] = useState(false);
+  const [isDeleteLoading, setIsDeleteLoading] = useState(false);
   const [data, setData] = useState(null);
 
-  function sendDeleteRequest(url,token,language,action){
+  async function sendDeleteRequest(url,token,language,hasAction,action=()=>{}){
     console.log('sending request . . .')
-    setIsLoading(true)
+    setIsDeleteLoading(true)
     axios.delete(`${process.env.API_URL}/${url}`, { headers: { token } })
     .then((res) => {
       console.log(res)
       setData(res)
-      fireNotification({icon:'success',label:t(`New${url[0].toUpperCase() + url.slice(1)}HasAddedSuccessfully`,language)})
-      let action = actionHelper(url,'add')
-      dispatch(action(res.data))
+      fireNotification({icon:'success',label:t(`${url.split('/')[0]}HasDeletedSuccessfully`,language)})
+      if(hasAction){
+        let action = actionHelper(url.split('/')[0],'delete')
+        dispatch(action(res.data.id))  
+      }
     }).catch((err) => {
-      console.log(err)
-      fireNotification({icon:'error',label:t('somethingWentWrong',language)})
-      setIsError(true)
+      if(err){
+        console.log(err)
+        fireNotification({icon:'error',label:t('somethingWentWrong',language)})
+        setIsDeleteError(true)  
+      }
     })
     action()
-    setIsLoading(false)  
+    setIsDeleteLoading(false)  
   }    
-  return {isError,isLoading,data,sendDeleteRequest}
+  return {isDeleteError,isDeleteLoading ,data,sendDeleteRequest}
 }
 export default DeleteRequest;

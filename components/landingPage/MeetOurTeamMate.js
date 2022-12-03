@@ -47,8 +47,8 @@ export default function MeetOurTeamMate({language}) {
           );
         }}
       >
-        <TeamMateCard />
-        <TeamMateCard />
+        <TeamMateCard people={'meetFarisAndAzat'} language={language} />
+        <TeamMateCard people={'meetFarisAndAhmed'} language={language}/>
       </Carousel>
     </div>
   )

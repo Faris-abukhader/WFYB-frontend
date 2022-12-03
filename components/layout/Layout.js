@@ -10,11 +10,11 @@ export default function Layout({ children }) {
   return (
     <div dir={language=='ar'?'rtl':'ltr'}>
       <Navbar show={showOffcanvas} offcanvasToggler={() => setShowOffcanvas(!showOffcanvas)} language={language} setLanguage={setLanguage}/>
-      <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas} />
+      <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas} language={language} />
       <div style={{minHeight:'100vh'}} onClick={()=>setShowOffcanvas(false)}>
         {children}
       </div>
-      <Footer/>
+      <Footer language={language}/>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import ProgressBar from '../general/ProgressBar'
 import { getTranslatedText as t } from '../../localization/config'
 import StatisticCard from '../dashboardHomePage/StatisticCard'
-export default function ProjectProgressCard({title,raised,fundingGoal,pledgeList,compaignDurationEnd,backers,daysLeft,category,campaigns,owner,language}) {
+export default function ProjectProgressCard({title,raised,fundingGoal,pledgeList=[],compaignDurationEnd,backers,daysLeft,category,campaigns,owner,language}) {
     const cardRef = useRef(null)
 
     const [donationAmount, setDonationAmount] = useState(0)
@@ -57,9 +57,9 @@ export default function ProjectProgressCard({title,raised,fundingGoal,pledgeList
                     <h5>{t('raised',language)} : ${getTotalRaised()}</h5>
                     <h5>{getPercentage()}%</h5>
                 </div>
-                <ProgressBar percentage={getPercentage()}/>
+                <ProgressBar percentage={getPercentage()} language={language}/>
                 <p className=''>{t('goal',language)} : <span className='text-green-600'>${fundingGoal}</span></p>
-                <div className='flex w-full h-12 space-x-2'>
+                <div className='flex w-full h-12 gap-2'>
                     {
                         [10, 20, 30, 40].map((item) => {
                             return(
@@ -75,7 +75,7 @@ export default function ProjectProgressCard({title,raised,fundingGoal,pledgeList
                         })
                     }   
                 </div>
-                <div className="flex w-full h-12 space-x-2">
+                <div className="flex w-full h-12 gap-2">
                     <span className='flex w-1 h-full justify-center items-center text-xl'>$</span>
                     <button className='w-20 h-full text-base font-semibold border-2 border-slate-200 
                                         rounded-full hover:border-green-600 focus:border-green-600'>
@@ -86,8 +86,8 @@ export default function ProjectProgressCard({title,raised,fundingGoal,pledgeList
                             onChange={(event) => {setDonationAmount(event.target.value)}}
                         />
                     </button>
-                    <button dir={language=='ar'?'rtl':'ltr'} className='bg-green-600 py-2 w-60 h-full rounded-3xl text-lg text-zinc-50 space-x-0
-                                        hover:opacity-90 hover:space-x-2 transition-all duration-300'> 
+                    <button dir={language=='ar'?'rtl':'ltr'} className='bg-green-600 py-2 w-60 h-full rounded-3xl text-lg text-zinc-50 gap-0
+                                        hover:opacity-90 hover:gap-2 transition-all duration-300'> 
                         <span dir={language=='ar'?'rtl':'ltr'}>{t('backProject',language)} &#8594;</span> 
                     </button>
                 </div>

@@ -41,7 +41,7 @@ export const languageSlice = createSlice({
    [HYDRATE]: (state,{payload}) =>{
     return payload.language
    }
-  },
+  }
 })
 
 

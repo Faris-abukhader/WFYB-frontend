@@ -1,6 +1,6 @@
 import Swal from "sweetalert2"
 const customClass = {
-    actions:'space-x-4',
+    actions:'gap-4',
     confirmButton:'px-6 py-2.5 text-gray-100 bg-blue-700  hover:bg-blue-800 rounded-md  appearance-none',
     cancelButton:'px-6 py-2.5 text-black ring appearance-none ring-gray-200 sm:outline sm:outline-gray-200 text-sm  rounded shadow-md hover:bg-gray-300 hover:shadow-lg',
     title:'font-almarai'
