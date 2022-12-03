@@ -254,4 +254,4 @@ npm run dev
 
 ## 📜 License
 
-This software is licensed under the [MIT](https://github.com/Faris-abukhader/we-work/blob/main/license) © [FaRiS](https://github.com/Faris-abukhader).
+This software is licensed under the [MIT](https://github.com/Faris-abukhader/WFYB-frontend/blob/main/licence) © [FaRiS](https://github.com/Faris-abukhader).
