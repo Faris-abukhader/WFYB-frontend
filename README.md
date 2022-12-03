@@ -23,22 +23,7 @@
 ## <img src="https://cdn-icons-png.flaticon.com/512/1436/1436664.png" width="25" height="25" style="padding-right:15px">  Introduction 
 
 <p>
-WeWork is an open source freelancing platform , where is consist of two parts , first part is Backend  and the other part is Frontend which you are reading now . In this part we gonna design different pages like landing page , job list , job details and more .
-<br/>
- </br>
-As we create authentication system at Backend , here in Frontend we also going to implement authentication to protect some routes and provide authorization for users .
-<br/>
- </br>
-In this project three different accounts going to use it , first visitor , second employer and lastly freelancer . Visitor has limited route can visit which only public routes , where employer and freelancer there share some routes + there own protected routes . 
-</br>
-</br>
-First scenario for freelancer to get employed
-Employers can publish there own jobs , then freelancer can provides there proposals , employers can accept or decline the proposals , once proposal is accepted one recruiting request gonna be send to freelancer , if both side accept the request the job goona be closed ; also the employer can send request to specific freelancer direclty without waiting for proposal.
-</br>
-</br>
-Second senario for freelancer to get employed
-Employers after they publish there jobs they can send hiring request to specifc freelancer , if the freelancer is accept that request , them freelancer can submit the product , and lastly the employer can rate freelancer work.
-</br>
+coming soon . . . 
 
 </p>
 
