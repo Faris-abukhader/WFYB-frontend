@@ -1,6 +1,6 @@
 <h1 align="center">WFYB</h1>
 <p align="center">
-📔<a href="https://github.com/Faris-abukhader/we-work/blob/main/README_ar.md"> بالعربي </a>📔 
+📔<a href="https://github.com/Faris-abukhader/WFYB-frontend/blob/main/README_ar.md"> بالعربي </a>📔 
  </p>
 <p align="center">
  backend-end part <a href="https://github.com/Faris-abukhader/WFYB-backend">from here</>
