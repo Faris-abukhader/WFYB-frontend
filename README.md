@@ -241,15 +241,21 @@ npm run dev
 
 | Name | Description |
 | --- | --- |
-| [`@lottiefiles/react-lottie-player`](https://github.com/LottieFiles/lottie-react) | This is a React component for the Lottie Web Player |
 | [`@reduxjs/toolkit`](https://www.npmjs.com/package/@reduxjs/toolkit) | Simple. Includes utilities to simplify common use cases like store setup, creating reducers, immutable update logic, and more |
 | [`next-redux-wrapper`](https://www.npmjs.com/package/next-redux-wrapper) | A HOC that brings Next.js and Redux together |
 | [`animate.css`](https://www.npmjs.com/package/animate.css) | Animate.css is a library of ready-to-use, cross-browser animations |
 | [`sweetalert2`](https://www.npmjs.com/package/sweetalert2) | A beautiful, responsive, customizable, accessible for JavaScript's popup boxes. |
 | [`next-auth`](https://github.com/nextauthjs/next-auth) | is a complete open source authentication solution for Next.js applications. |
-| [`react-rating`](https://www.npmjs.com/package/react-rating) | react rating component.  |
-| [`google-map-react`](https://www.npmjs.com/package/google-map-react) | is a component written over a small set of the Google Maps API |
+| [`@smastrom/react-rating`](https://www.npmjs.com/package/@smastrom/react-rating) | react rating component.  |
 | [`tailwindcss`](https://www.npmjs.com/package/tailwindcss) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`atropos`](https://www.npmjs.com/package/atropos) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`axios`](https://www.npmjs.com/package/axios) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`chart.js`](https://www.npmjs.com/package/chart.js) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`formik`](https://www.npmjs.com/package/formik) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`hamburger-react`](https://www.npmjs.com/package/hamburger-react) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`i18next`](https://www.npmjs.com/package/i18next) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`react-responsive-carousel`](https://www.npmjs.com/package/react-responsive-carousel) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`yup`](https://www.npmjs.com/package/yup) | A utility-first CSS framework for rapidly building custom user interfaces. |
 
 
 ## 📜 License
