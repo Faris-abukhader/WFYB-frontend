@@ -101,53 +101,61 @@ npm run dev
 ## <img src="https://cdn-icons-png.flaticon.com/512/535/535471.png" width="25" height="25" style="padding-right:15px">  بنية مجلد المشروع   
 
 ```
-📦we-work
+📦wfyb-frontend
  ┣ 📂components
+ ┃ ┣ 📂UserLayout
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┗ 📜…
+ ┃ ┃ ┗ 📜Layout.js
  ┃ ┣ 📂auth
- ┃ ┃ ┗ 📜AccountTypeCard.js
- ┃ ┣ 📂dashboard
- ┃ ┃ ┣ 📂allWorks
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜allWorks.js
- ┃ ┃ ┣ 📂employerHiringRequest
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜employerHiringRequest.js
- ┃ ┃ ┣ 📂freelancerHiringRequest
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜freelancerHiringRequest.js
- ┃ ┃ ┣ 📂freelancerProducts
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜freelancerProducts.js
- ┃ ┃ ┣ 📂freelancerProposals
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜freelancerProposals.js
- ┃ ┃ ┣ 📂profile
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜profile.js
- ┃ ┃ ┣ 📜SubNav.js
- ┃ ┃ ┗ 📜WelcomingBanner.js
+ ┃ ┃ ┣ 📜auth.js
+ ┃ ┃ ┗ 📜…
+ ┃ ┣ 📂dashboardBookmark
+ ┃ ┃ ┣ 📜dashboardBookmark.js
+ ┃ ┃ ┗ 📜…
+ ┃ ┣ 📂dashboardHomePage
+ ┃ ┃ ┣ 📜dashboardHomePage.js
+ ┃ ┃ ┗ 📜…
+ ┃ ┣ 📂dashboardInvestedProjects
+ ┃ ┃ ┣ 📜dashboardInvestedProjects.js
+ ┃ ┃ ┗ 📜…
+ ┃ ┣ 📂dashboardMyProjects
+ ┃ ┃ ┣ 📜dashboardMyProjects.js
+ ┃ ┃ ┗ 📜…
+ ┃ ┣ 📂dashboardProfile
+ ┃ ┃ ┣ 📜dashboardProfile.js
+ ┃ ┃ ┗ 📜…
  ┃ ┣ 📂general
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜general.js
- ┃ ┣ 📂jobDetails
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜jobDetails.js
- ┃ ┣ 📂jobList
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜jobList.js
+ ┃ ┃ ┣ 📜…
+ ┃ ┃ ┗ 📜general.js
  ┃ ┣ 📂landingPage
- ┃ ┃ ┃ ┣ 📜...
- ┃ ┃ ┃ ┣ 📜landingPage.js
+ ┃ ┃ ┣ 📜…
+ ┃ ┃ ┗ 📜landingPage.js
  ┃ ┣ 📂layout
  ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┣ 📜Footer.js
- ┃ ┃ ┃ ┣ 📜FooterSection.js
- ┃ ┃ ┃ ┣ 📜Navbar.js
- ┃ ┃ ┃ ┣ 📜NewsLetter.js
- ┃ ┃ ┃ ┗ 📜Offcanva.js
- ┃ ┃ ┣ 📜Layout.js
- ┃ ┃ ┗ 📜UserLayout.js
- ┃ ┗ 📂userProfile
+ ┃ ┃ ┃ ┗ 📜…
+ ┃ ┃ ┗ 📜Layout.js
+ ┃ ┣ 📂myProjects
+ ┃ ┃ ┗ 📜myProjects.js
+ ┃ ┣ 📂projectDetails
+ ┃ ┃ ┣ 📜…
+ ┃ ┃ ┗ 📜projectDetails.js
+ ┃ ┗ 📂projectList
+ ┃ ┃ ┣ 📜…
+ ┃ ┃ ┗ 📜projectList.js
+ ┣ 📂hooks
+ ┃ ┣ 📜DeleteRequest.js
+ ┃ ┣ 📜GetRequest.js
+ ┃ ┣ 📜PostRequest.js
+ ┃ ┗ 📜PutRequest.js
+ ┣ 📂localization
+ ┃ ┣ 📂sources
+ ┃ ┃ ┣ 📜ar.js
+ ┃ ┃ ┣ 📜en.js
+ ┃ ┃ ┣ 📜sw.js
+ ┃ ┃ ┗ 📜tkm.js
+ ┃ ┣ 📜config.js
+ ┃ ┗ 📜locationlizationContext.js
  ┣ 📂pages
  ┃ ┣ 📂api
  ┃ ┃ ┣ 📂auth
@@ -157,65 +165,42 @@ npm run dev
  ┃ ┃ ┣ 📜signIn.js
  ┃ ┃ ┗ 📜signUp.js
  ┃ ┣ 📂dashboard
- ┃ ┃ ┣ 📂allWorks
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┣ 📂employer-hired-history
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┣ 📂freelancer-all-works
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┣ 📂freelancer-hired-history
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┣ 📂freelancer-proposals
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┣ 📂profile
- ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┗ 📜index.js
- ┃ ┣ 📂freelancer-profile
- ┃ ┃ ┗ 📜index.js
- ┃ ┣ 📂jobDetails
- ┃ ┃ ┗ 📜index.js
- ┃ ┣ 📂jobList
- ┃ ┃ ┗ 📜index.js
- ┃ ┣ 📂profile
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┣ 📜bookmark.js
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┣ 📜investedProjects.js
+ ┃ ┃ ┣ 📜myProjects.js
+ ┃ ┃ ┗ 📜profile.js
+ ┃ ┣ 📜404.js
  ┃ ┣ 📜_app.js
- ┃ ┗ 📜index.js
+ ┃ ┣ 📜_errors.js
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜projectDetails.js
+ ┃ ┗ 📜projectList.js
  ┣ 📂public
- ┃ ┣ 📂...
+ ┃ ┣ 📂avatar
+ ┃ ┣ 📂fonts
+ ┃ ┃ ┗ 📂almarai
+ ┃ ┣ 📂icons
+ ┃ ┣ 📂illustrations
+ ┃ ┗ 📂images
  ┣ 📂store
  ┃ ┣ 📂slices
- ┃ ┃ ┣ 📜certification.js
- ┃ ┃ ┣ 📜education.js
- ┃ ┃ ┣ 📜employmentHistory.js
- ┃ ┃ ┣ 📜hiringRequest.js
- ┃ ┃ ┣ 📜item.js
- ┃ ┃ ┣ 📜job.js
+ ┃ ┃ ┣ 📜bookmark.js
  ┃ ┃ ┣ 📜language.js
- ┃ ┃ ┣ 📜product.js
- ┃ ┃ ┗ 📜proposal.js
+ ┃ ┃ ┗ 📜project.js
+ ┃ ┣ 📜actionHelper.js
  ┃ ┗ 📜store.js
  ┣ 📂styles
  ┃ ┣ 📜Home.module.css
- ┃ ┣ 📜Wave.module.css
  ┃ ┗ 📜globals.css
  ┣ 📂utils
- ┃ ┣ 📜citiesList.js
- ┃ ┣ 📜dashboardPages.js
- ┃ ┣ 📜emailValidation.js
  ┃ ┣ 📜fireNotification.js
- ┃ ┣ 📜footerSections.js
- ┃ ┣ 📜hourPerWeek.js
- ┃ ┣ 📜industries.js
- ┃ ┣ 📜jobCategories.js
- ┃ ┣ 📜jobFinishingTimeOptions.js
- ┃ ┣ 📜languageLevels.js
- ┃ ┣ 📜languagesList.js
- ┃ ┣ 📜popularKey.js
- ┃ ┣ 📜salaryRange.js
+ ┃ ┣ 📜getPagesList.js
+ ┃ ┣ 📜languageList.js
+ ┃ ┣ 📜projectCateogries.js
+ ┃ ┣ 📜projectType.js
  ┃ ┗ 📜utils.js
- ┣ 📜.DS_Store
  ┣ 📜.env.local
- ┣ 📜.eslintrc.json
  ┣ 📜.gitignore
  ┣ 📜README.md
  ┣ 📜next.config.js
@@ -223,7 +208,8 @@ npm run dev
  ┣ 📜package.json
  ┣ 📜postcss.config.js
  ┗ 📜tailwind.config.js
- ```
+
+```
 
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/535/535471.png" width="25" height="25" style="padding-right:15px">  الخصائص  
@@ -240,15 +226,21 @@ npm run dev
 
   | اسم المكتبة  | الوصف |
 | --- | --- |
-| [`@lottiefiles/react-lottie-player`](https://github.com/LottieFiles/lottie-react) | This is a React component for the Lottie Web Player |
 | [`@reduxjs/toolkit`](https://www.npmjs.com/package/@reduxjs/toolkit) | Simple. Includes utilities to simplify common use cases like store setup, creating reducers, immutable update logic, and more |
 | [`next-redux-wrapper`](https://www.npmjs.com/package/next-redux-wrapper) | A HOC that brings Next.js and Redux together |
 | [`animate.css`](https://www.npmjs.com/package/animate.css) | Animate.css is a library of ready-to-use, cross-browser animations |
 | [`sweetalert2`](https://www.npmjs.com/package/sweetalert2) | A beautiful, responsive, customizable, accessible for JavaScript's popup boxes. |
 | [`next-auth`](https://github.com/nextauthjs/next-auth) | is a complete open source authentication solution for Next.js applications. |
-| [`react-rating`](https://www.npmjs.com/package/react-rating) | react rating component.  |
-| [`google-map-react`](https://www.npmjs.com/package/google-map-react) | is a component written over a small set of the Google Maps API |
+| [`@smastrom/react-rating`](https://www.npmjs.com/package/@smastrom/react-rating) | react rating component.  |
 | [`tailwindcss`](https://www.npmjs.com/package/tailwindcss) | A utility-first CSS framework for rapidly building custom user interfaces. |
+| [`atropos`](https://www.npmjs.com/package/atropos) | Touch-friendly 3D parallax hover effects. |
+| [`axios`](https://www.npmjs.com/package/axios) | Promise based HTTP client for the browser and node.js |
+| [`chart.js`](https://www.npmjs.com/package/chart.js) | Simple yet flexible JavaScript charting for designers & developers. |
+| [`formik`](https://www.npmjs.com/package/formik) | Build forms in React, without the tears. |
+| [`hamburger-react`](https://www.npmjs.com/package/hamburger-react) | Animated hamburger menu icons for React. |
+| [`i18next`](https://www.npmjs.com/package/i18next) | I18next internationalization framework. |
+| [`react-responsive-carousel`](https://www.npmjs.com/package/react-responsive-carousel) | React Responsive Carousel. |
+| [`yup`](https://www.npmjs.com/package/yup) | Dead simple Object schema validation. |
 
 
 ## 📜 الرخصة
