@@ -54,7 +54,7 @@ export default function SignUpForm({ language }) {
                     <SelectList.Option value={`b`}>{t('backer',language)}</SelectList.Option>
                 </SelectList>
                 <button disabled={!formik.isValid} type='submit' className='w-full flex items-center justify-center space-x-2 bg-green-500 rounded-lg py-2 text-gray-100 disabled:bg-green-400 disabled:text-gray-200'>
-                    {isLoading &&<SpinButton size={4}/>} <span>{t('login', language)}</span>
+                    {isLoading &&<SpinButton size={4}/>} <span>{t('signUp', language)}</span>
                     </button>
                 </form>
             </div>

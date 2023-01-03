@@ -125,7 +125,8 @@ const tkm = {
     'backer':'',
     'accountType':'',
     'somethingWentWrong':'',
-    'newAuthHasAddedSuccessfully':''
+    'newAuthHasAddedSuccessfully':'',
+    'signUp':''
   
 }
 

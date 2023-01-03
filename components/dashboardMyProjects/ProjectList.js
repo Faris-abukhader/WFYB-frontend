@@ -38,7 +38,7 @@ export default function ProjectList({language}) {
        {projects.map((project,index)=><ProjectRow {...project} clickHandler={()=>toggleReviewModal(project.id)} key={project.id} isLast={projects.length!=(index+1)}/>)}
        </ul>
         :
-        <NoDataFound label={'noProjectsFound'}/>
+        <NoDataFound label={'noProjectsFound'} language={language}/>
        }
       <ReviewProjectModel show={showReviewModal} toggle={toggleReviewModal} language={language} data={reviewModalData} setProjectUpdateId={setProjectUpdateId}/>
       <EditProjectModel show={showEditModal} toggle={toggleEditModal} language={language} data={updateModalData}/>

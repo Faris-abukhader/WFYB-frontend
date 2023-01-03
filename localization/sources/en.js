@@ -124,7 +124,8 @@ const en = {
     'backer':'backer',
     'accountType':'account type',
     'somethingWentWrong':'Something went wrong please try again later.',
-    'newAuthHasAddedSuccessfully':'Register new account successfully.'
+    'newAuthHasAddedSuccessfully':'Register new account successfully.',
+    'signUp':'Sign up'
 
 }
 
