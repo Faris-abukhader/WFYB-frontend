@@ -77,7 +77,7 @@ export default function AddNewProjectModel({ show, toggle, language }) {
                 <SelectList onChange={props.handleChange} name={`category`} isValid={props.errors.category ? false : true} label={t('category', language)}>
                   {projectCategories && projectCategories.map((category, index) => <SelectList.Option key={index} value={category}>{t(category, language)}</SelectList.Option>)}
                 </SelectList>
-                <SelectList onChange={props.handleChange} name={`projectType`} isValid={props.errors.category ? false : true} label={t('category', language)}>
+                <SelectList onChange={props.handleChange} name={`projectType`} isValid={props.errors.category ? false : true} label={t('projectType', language)}>
                   {projectType && projectType.map((type, index) => <SelectList.Option key={index} value={type}>{t(type, language)}</SelectList.Option>)}
                 </SelectList>
               </div>
@@ -112,6 +112,7 @@ export default function AddNewProjectModel({ show, toggle, language }) {
                   </ItemGenerator>
                 )}
               </FieldArray>
+              <pre>{JSON.stringify(props,null,2)}</pre>
               <CustomModel.Footer>
                 <CustomModel.ConfirmButton disable={!props.isValid} onClickHandler={() => { }} >{t('confirm',language)}</CustomModel.ConfirmButton>
                 <CustomModel.CloseButton onClickHandler={() => toggle()}>{t('close',language)}</CustomModel.CloseButton>

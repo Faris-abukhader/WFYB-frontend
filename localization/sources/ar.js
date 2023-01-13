@@ -125,6 +125,7 @@ const ar = {
   'backer':'ممول',
   'accountType':'نوع الحساب',
   'somethingWentWrong':'حدث هنا خطأ غير متوقع ، يرجى المحاولة لاحقاً.',
-  'newAuthHasAddedSuccessfully':'تم انشاء حساب جديد بنجاح.'
+  'newAuthHasAddedSuccessfully':'تم انشاء حساب جديد بنجاح.',
+  'signUp':'Sign up'
 }
 export default ar;
