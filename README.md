@@ -10,6 +10,7 @@
 ## 🚩 Table of Contents
 
 - [Introduction](#--introduction)
+- [Model and diagram](#--model-and-diagram)
 - [Installation](#--installation)
 - [Development setup](#--development-setup)
 - [Project structure](#--project-structure)
@@ -18,15 +19,47 @@
 - [License](#-license)
 
 
-
-
 ## <img src="https://cdn-icons-png.flaticon.com/512/1436/1436664.png" width="25" height="25" style="padding-right:15px">  Introduction 
 
 <p>
-coming soon . . . 
+WFYB is to help bring creative projects to life. A home for film, music, art, theater, games, comics, design, photography, and more.
+
+The main idea behind this project is Crowdfunding which is the practice of funding a project  by raising money from a large number of people.
+
+Let's talk about how does it work , so in this platform we have two type of accounts , first is the owner of the idea or project (starter) , second is the investor (backer) , so the starter have a creative idea or start up , but he/she needs money , here the backer comes up , the backer has money and want to invest this  money into a projects  so he/she can gain  more and more , so the backer can invest into this project or idea, and the cool things here , that the backer is not asked to invest a lot of money in one project , the pledge limit start from 10$ , which is very safe way to invest your money , invests it into many project rather than invest it in one project .
+
+after we got the general idea about this project main idea , let's dive deeper into the core of this project.
+
+First we're going to look at the project from authentication layer , from this aspect we have two different types of pages , one is public pages which include main page (landing page) project list page , authentication pages ... etc. Second is the private pages which is include dashboard pages ,. Here it's good to mention that I used next-auth library to handle the whole authentication part at frontend .
+
+Now after we learn about public and private pages , let's dive deeper with private page , in private pages we also have three different pages , first one is only accessible by the starter account , second only accessible by the backer account , third is accessible for both accounts , that's what we mean by authorization .
+
+The technic that I used for authentication and authorization is by storing the user info into session in the server , and check this session at server side rendering SSR , before I render the pages itself , this one makes the authentication more effective and secure.
+
+After we talked about authentication and authorization it's time to talk about the private route (page) which is all under the dashboard route , again here we use authorization to render different pages to different users . let’s start our saying with the shard pages for both users :
+
+- Main page (home page) : in this page I included real statistics about the account , which include how many project published or supported , how many pledge received or published , then I used chart to present all these data to the user , giving him/her a better user experience.
+
+- Profile :  this page where the user can update his/her info , which include first name , last name , nationality and avatar.
+
+ 
+Now let talk about the starter pages :
+- Projects page: in this page we have user's projects list , where you can apply CRUD operation on it , CREATE, READ, UPDATE and DELETE , also he/she can review their project by clicking on the title from the project card in the list.
+
+
+And for the backer we have :
+- bookMark : where in this page the backer can check the projects that he/she saved  , and the percentage of project funding goal , by clicking on the project's name it will navigate to the project detail page .
+- investedProjects : in this page the backer can check the project that he/she invested into ,  and his/her pledge the amount with the date of creating.
+
 
 </p>
 
+## <img src="https://cdn-icons-png.flaticon.com/512/814/814848.png" width="25" height="25" style="padding-right:15px">  Model and diagram
+
+<div style="padding:0px 200px 0px 200px">
+<img src='https://user-images.githubusercontent.com/70070951/208333388-3f410e1a-e8b6-4fea-be73-e076a8c3bc03.png'/>
+<img src='https://user-images.githubusercontent.com/70070951/208333380-18e81015-7bb5-44eb-bd97-f7c0cf8c7ef2.png'/>
+</div>
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/814/814848.png" width="25" height="25" style="padding-right:15px">  Installation 
 
